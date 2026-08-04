@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <defs>
+    <linearGradient id="gradsite2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <pattern id="gridsite2" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="700" fill="url(#gradsite2)"/>
+  <rect width="1200" height="700" fill="url(#gridsite2)"/>
+  <circle cx="1050" cy="120" r="180" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="120" cy="600" r="220" fill="rgba(255,255,255,0.05)"/>
+  <text x="50%" y="47%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="52" font-weight="800" fill="#ffffff">Get in Touch with AET</text>
+  <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="rgba(255,255,255,0.75)">We usually respond within 24 hours</text>
+</svg>
