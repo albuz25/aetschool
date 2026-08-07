@@ -23,6 +23,7 @@ import { cn } from "@/lib/utils";
 interface InquiryFormProps {
   source: string;
   programSlug?: string;
+  initialProgramInterest?: string;
   compact?: boolean;
   onSuccess?: () => void;
   submitLabel?: string;
@@ -32,6 +33,7 @@ interface InquiryFormProps {
 export function InquiryForm({
   source,
   programSlug,
+  initialProgramInterest,
   compact = false,
   onSuccess,
   submitLabel = "Unlock Brochure & Fee Details",
@@ -52,9 +54,8 @@ export function InquiryForm({
       name: "",
       email: "",
       phone: "",
-      programInterest: programSlug ?? "",
+      programInterest: programSlug ?? initialProgramInterest ?? "",
       city: "",
-      state: "",
       source,
     },
   });
@@ -83,9 +84,8 @@ export function InquiryForm({
         name: "",
         email: "",
         phone: "",
-        programInterest: programSlug ?? "",
+        programInterest: programSlug ?? initialProgramInterest ?? "",
         city: "",
-        state: "",
         source,
       });
       onSuccess?.();
@@ -117,7 +117,7 @@ export function InquiryForm({
       </div>
 
       <div className="space-y-1.5">
-        <Label htmlFor={`${source}-email`}>Email Address</Label>
+          <Label htmlFor={`${source}-email`}>Email Address (optional)</Label>
         <Input id={`${source}-email`} type="email" placeholder="you@example.com" {...register("email")} />
         {errors.email ? <FieldError message={errors.email.message} /> : null}
       </div>
@@ -134,6 +134,7 @@ export function InquiryForm({
             <SelectValue placeholder="Select a program" />
           </SelectTrigger>
           <SelectContent>
+            <SelectItem value="diploma-fine-arts">Diploma in Fine Arts</SelectItem>
             {allPrograms.map((program) => (
               <SelectItem key={program.slug} value={program.slug}>
                 {program.shortTitle}
@@ -144,16 +145,11 @@ export function InquiryForm({
         {errors.programInterest ? <FieldError message={errors.programInterest.message} /> : null}
       </div>
 
-      <div className={cn("grid gap-4", compact ? "grid-cols-2" : "grid-cols-1 sm:grid-cols-2")}>
+      <div className="space-y-1.5">
         <div className="space-y-1.5">
           <Label htmlFor={`${source}-city`}>City</Label>
           <Input id={`${source}-city`} placeholder="Your city" {...register("city")} />
           {errors.city ? <FieldError message={errors.city.message} /> : null}
-        </div>
-        <div className="space-y-1.5">
-          <Label htmlFor={`${source}-state`}>State</Label>
-          <Input id={`${source}-state`} placeholder="Your state" {...register("state")} />
-          {errors.state ? <FieldError message={errors.state.message} /> : null}
         </div>
       </div>
 

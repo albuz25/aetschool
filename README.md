@@ -10,7 +10,7 @@ A modern, responsive, lead-generation-focused website for **AET School of Design
 - **Animations:** Framer Motion
 - **Forms:** React Hook Form + Zod validation
 - **State:** Zustand (global lead capture modal)
-- **Lead capture:** `/api/leads` route (logs leads server-side today; Supabase scaffold included for later wiring — see below)
+- **Lead capture:** `/api/leads` route with server-side Supabase persistence
 
 ## Getting Started
 
@@ -33,19 +33,19 @@ npm run start
 ```
 app/                       App Router pages
   page.tsx                 Home
+  fine-arts/page.tsx       Fine Arts program pathways
   programs/page.tsx        Program listing (search + filter)
   programs/[slug]/page.tsx Program detail (B.Voc + software packages)
-  autodesk-atc/page.tsx    Autodesk ATC certification page
   about/page.tsx           About + university partnership
   contact/page.tsx         Contact + map embed + inquiry form
   api/leads/route.ts       Lead capture API route
 
 components/
   layout/                  Header (mega-menu), Footer
-  home/                    Hero, TrustStats, ProgramGrid, AutodeskHighlight, WhyAET, FAQSection
+  home/                    Hero, TrustStats, ProgramGrid, WhyAET, FAQSection
   programs/                ProgramCard, ProgramFilterBar, ProgramDetailView, etc.
   leads/                   InquiryForm, QuickLeadForm, LeadCaptureModal
-  shared/                  Container, SectionHeading, AutodeskBadge, FloatingContactBar
+  shared/                  Container, SectionHeading, FloatingContactBar
   ui/                      Shadcn UI primitives
 
 data/
@@ -55,13 +55,13 @@ data/
 lib/
   types.ts                  Program / lead type definitions
   validations/lead.ts        Zod schema for the lead form
-  supabase/                  Supabase client scaffolding (not wired in yet)
+  supabase/                  Server-side Supabase client
 
 store/
   useLeadModalStore.ts       Zustand store for the global lead modal
 
 supabase/
-  schema.sql                 SQL schema for the `leads` table (for future wiring)
+  schema.sql                 SQL schema for the `leads` table
 ```
 
 ## Lead Capture Flow
@@ -69,24 +69,21 @@ supabase/
 Every "Enquire Now" / "Get Details" / "Download Prospectus" CTA opens the global `LeadCaptureModal`
 (or scrolls to an inline form on the homepage / program pages), which POSTs to `/api/leads`.
 
-Today, `/api/leads`:
+`/api/leads`:
 
 1. Re-validates the payload server-side with the shared Zod schema.
-2. Logs the structured lead to the server console.
+2. Inserts the lead into Supabase using a server-only service role key.
 3. Returns `{ success: true, id }`.
 
-This keeps the site **fully functional out of the box** with no external services required.
+If Supabase credentials are missing, the route safely rejects the submission instead of losing the lead.
 
-### Wiring up Supabase (next stage)
+### Configure Supabase
 
-The Supabase integration is scaffolded but intentionally not wired into the live request path yet:
-
-1. Create a Supabase project and run `supabase/schema.sql` in the SQL editor to create the `leads` table (RLS enabled, insert-only for anonymous users).
+1. Create a Supabase project and run `supabase/schema.sql` in the SQL editor to create the `leads` table. RLS stays enabled; the table is not publicly writable.
 2. Copy `.env.local.example` to `.env.local` and fill in:
    - `NEXT_PUBLIC_SUPABASE_URL`
-   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
    - `SUPABASE_SERVICE_ROLE_KEY`
-3. In `app/api/leads/route.ts`, uncomment the `supabaseServerClient.from("leads").insert(...)` block (and its import) to persist leads to Supabase instead of (or in addition to) the console log.
+3. Restart the Next.js server and submit a test enquiry. Confirm it appears in the `leads` table in Supabase.
 
 ## Content & Branding Notes
 

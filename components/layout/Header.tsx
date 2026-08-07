@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ChevronDown, GraduationCap, Menu, Wrench } from "lucide-react";
@@ -11,7 +12,6 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-import { AutodeskBadge } from "@/components/shared/AutodeskBadge";
 import { Container } from "@/components/shared/Container";
 import { mainNavLinks, megaMenuColumns } from "@/data/navigation";
 import { useLeadModalStore } from "@/store/useLeadModalStore";
@@ -25,18 +25,15 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/80">
       <Container className="flex h-16 items-center justify-between gap-4 lg:h-20">
-        <Link href="/" className="flex shrink-0 items-center gap-2">
-          <span className="flex size-9 items-center justify-center rounded-lg bg-navy font-heading text-lg font-bold text-white lg:size-10">
-            AET
-          </span>
-          <span className="hidden flex-col leading-tight sm:flex">
-            <span className="font-heading text-sm font-bold text-navy lg:text-base">
-              AET School of Design
-            </span>
-            <span className="hidden text-[11px] text-muted-foreground lg:block">
-              Autodesk ATC Partner
-            </span>
-          </span>
+        <Link href="/" className="flex shrink-0 items-center">
+          <Image
+            src="/images/site/aet-logo.jpeg"
+            alt="AET School of Design"
+            width={160}
+            height={48}
+            priority
+            className="h-10 w-auto object-contain lg:h-12"
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
@@ -106,7 +103,6 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <AutodeskBadge className="hidden xl:inline-flex" />
           <Button
             className="hidden bg-orange text-white hover:bg-orange-light sm:inline-flex"
             onClick={() => openModal({ source: "header" })}

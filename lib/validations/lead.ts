@@ -9,7 +9,12 @@ export const leadFormSchema = z.object({
     .trim()
     .min(2, { message: "Please enter your full name." })
     .max(80, { message: "Name looks too long." }),
-  email: z.email({ message: "Please enter a valid email address." }),
+  email: z
+    .string()
+    .trim()
+    .refine((value) => value === "" || z.email().safeParse(value).success, {
+      message: "Please enter a valid email address.",
+    }),
   phone: z
     .string()
     .trim()
@@ -18,7 +23,6 @@ export const leadFormSchema = z.object({
     .string()
     .min(1, { message: "Please select a program you're interested in." }),
   city: z.string().trim().min(2, { message: "Please enter your city." }),
-  state: z.string().trim().min(2, { message: "Please enter your state." }),
   source: z.string().min(1),
 });
 

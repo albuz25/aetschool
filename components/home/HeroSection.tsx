@@ -5,14 +5,13 @@ import Link from "next/link";
 import { CheckCircle2, ArrowRight, Download } from "lucide-react";
 
 import { Container } from "@/components/shared/Container";
-import { AutodeskBadge } from "@/components/shared/AutodeskBadge";
 import { Button } from "@/components/ui/button";
 import { QuickLeadForm } from "@/components/leads/QuickLeadForm";
 import { useLeadModalStore } from "@/store/useLeadModalStore";
 
 const HIGHLIGHTS = [
   "University-partnered B.Voc degrees in Design & Tech",
-  "Learn on official Autodesk software as an Authorized ATC",
+  "Hands-on training with industry-standard software",
   "Job-focused Gen AI, Data Science & Design skill packages",
   "Placement support & industry mentorship on every program",
 ];
@@ -36,13 +35,12 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <AutodeskBadge />
-          <h1 className="mt-5 font-heading text-4xl leading-tight font-extrabold text-white sm:text-5xl">
+          <h1 className="font-heading text-4xl leading-tight font-extrabold text-white sm:text-5xl">
             Master Design, Tech &amp; <span className="text-orange">Gen AI</span>
           </h1>
           <p className="mt-5 max-w-lg text-base leading-relaxed text-white/70">
             AET School of Design offers university-partnered B.Voc degrees and industry-aligned software
-            packages — taught on official Autodesk tools as an Authorized Autodesk Training Centre.
+            packages designed for practical, career-focused learning.
           </p>
 
           <ul className="mt-6 space-y-3">

@@ -121,7 +121,7 @@ export const bvocPrograms: Program[] = [
     faqs: [
       {
         question: "Will I learn Autodesk Revit as part of this degree?",
-        answer: "Yes. Revit and BIM workflows are integrated from Semester 3 onward, and AET is an Authorized Autodesk Training Centre so training follows official Autodesk curriculum.",
+        answer: "Yes. Revit and BIM workflows are integrated from Semester 3 onward as part of the interior design curriculum.",
       },
       {
         question: "Are site visits included?",
@@ -131,6 +131,7 @@ export const bvocPrograms: Program[] = [
     accreditation: "Awarded in partnership with a UGC-recognized university under the National Skills Qualification Framework (NSQF).",
     eligibility: "10+2 in any stream from a recognized board.",
     fees: "Contact admissions for current semester-wise fee structure and scholarship eligibility.",
+    brochurePath: "/brochures/bvoc-interior-design.pdf",
   },
   {
     slug: "bvoc-fine-arts",
@@ -189,6 +190,7 @@ export const bvocPrograms: Program[] = [
     accreditation: "Awarded in partnership with a UGC-recognized university under the National Skills Qualification Framework (NSQF).",
     eligibility: "10+2 in any stream from a recognized board.",
     fees: "Contact admissions for current semester-wise fee structure and scholarship eligibility.",
+    brochurePath: "/brochures/bvoc-fine-arts.pdf",
   },
   {
     slug: "bvoc-data-science",
@@ -305,6 +307,7 @@ export const bvocPrograms: Program[] = [
     accreditation: "Awarded in partnership with a UGC-recognized university under the National Skills Qualification Framework (NSQF).",
     eligibility: "10+2 in any stream from a recognized board.",
     fees: "Contact admissions for current semester-wise fee structure and scholarship eligibility.",
+    brochurePath: "/brochures/bvoc-digital-marketing.pdf",
   },
 ];
 
@@ -315,9 +318,9 @@ export const softwarePackages: Program[] = [
     title: "Autodesk Revit & CAD Package",
     shortTitle: "Revit & CAD Package",
     duration: "4 Months",
-    tagline: "Become industry-ready on AutoCAD and Revit Architecture/MEP as part of our Authorized Autodesk Training Centre curriculum.",
+    tagline: "Become industry-ready on AutoCAD and Revit Architecture/MEP through hands-on drafting and BIM training.",
     overview:
-      "An intensive, certification-focused package covering 2D drafting in AutoCAD through to full Building Information Modeling in Revit Architecture and MEP, taught on official Autodesk software and curriculum as part of our ATC partnership.",
+      "An intensive, certification-focused package covering 2D drafting in AutoCAD through to full Building Information Modeling in Revit Architecture and MEP.",
     heroImage: "/images/programs/revit-cad.svg",
     softwareTools: [
       { name: "AutoCAD", iconLabel: "autocad" },
@@ -325,7 +328,7 @@ export const softwarePackages: Program[] = [
       { name: "Revit MEP", iconLabel: "revit" },
     ],
     highlights: [
-      "Taught on official Autodesk software (ATC Partner)",
+      "Hands-on AutoCAD and Revit training",
       "Certificate of Completion from AET",
       "Hands-on project-based sessions",
       "Ideal for architecture, engineering & construction roles",
@@ -358,10 +361,10 @@ export const softwarePackages: Program[] = [
     faqs: [
       {
         question: "Do I get an Autodesk certification after this package?",
-        answer: "As an Authorized Autodesk Training Centre, AET issues a certificate of completion aligned to official Autodesk curriculum; eligible learners can also pursue Autodesk Certified User/Professional exams separately.",
+        answer: "AET issues a certificate of completion. Learners can also explore external Autodesk certification exams separately, subject to their eligibility requirements.",
       },
     ],
-    certificationBody: "Authorized Autodesk Training Centre (ATC) — AET School of Design",
+    certificationBody: "Certificate of Completion — AET School of Design",
     eligibility: "Open to students, graduates and working professionals in architecture/engineering fields.",
     fees: "Contact admissions for current fee structure and batch schedule.",
   },
@@ -486,7 +489,7 @@ export const softwarePackages: Program[] = [
     duration: "4 Months",
     tagline: "Master the complete interior visualization stack: AutoCAD, SketchUp, 3ds Max, V-Ray and Revit.",
     overview:
-      "A software-focused package for aspiring interior designers and visualizers who want deep, hands-on mastery of the industry's core design and rendering tools, taught with official Autodesk curriculum as part of our ATC partnership.",
+      "A software-focused package for aspiring interior designers and visualizers who want deep, hands-on mastery of the industry's core design and rendering tools.",
     heroImage: "/images/programs/interior-3d.svg",
     softwareTools: [
       { name: "AutoCAD", iconLabel: "autocad" },
@@ -496,7 +499,7 @@ export const softwarePackages: Program[] = [
       { name: "Autodesk Revit", iconLabel: "revit" },
     ],
     highlights: [
-      "Taught on official Autodesk software (ATC Partner)",
+      "Hands-on design and visualization software training",
       "Covers full visualization pipeline end-to-end",
       "Photorealistic rendering with V-Ray",
       "Certificate of Completion from AET",
@@ -531,7 +534,7 @@ export const softwarePackages: Program[] = [
         answer: "Yes, this package is popular with design graduates who want to specialize deeply in the software/visualization side of interior design.",
       },
     ],
-    certificationBody: "Authorized Autodesk Training Centre (ATC) — AET School of Design",
+    certificationBody: "Certificate of Completion — AET School of Design",
     eligibility: "Open to design students, graduates and working professionals.",
     fees: "Contact admissions for current fee structure and batch schedule.",
   },
@@ -555,9 +558,9 @@ export const generalFaqs: ProgramFAQGeneral[] = [
       "Yes, our B.Voc degrees are awarded through university partnerships under the National Skills Qualification Framework (NSQF), making them valid for further academic progression and recognized employment.",
   },
   {
-    question: "What makes AET an Authorized Autodesk Training Centre different from a regular institute?",
+    question: "How does AET keep its software training industry-relevant?",
     answer:
-      "As an Authorized Autodesk Training Centre (ATC), our curriculum, software licensing and instructor training follow official Autodesk standards — meaning you learn on genuine, up-to-date Autodesk software with industry-aligned content.",
+      "Our programs combine practical projects, current software workflows and portfolio development to help students build career-ready skills.",
   },
   {
     question: "Does AET provide placement assistance after course completion?",

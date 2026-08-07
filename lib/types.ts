@@ -29,6 +29,8 @@ export interface Program {
   curriculum: CurriculumModule[];
   careerRoles: string[];
   faqs?: ProgramFAQ[];
+  /** Public brochure PDF path, when available for this program */
+  brochurePath?: string;
   /** University partner offering accreditation, only for B.Voc programs */
   accreditation?: string;
   /** Certifying body for short-term software packages */
@@ -39,10 +41,9 @@ export interface Program {
 
 export interface LeadPayload {
   name: string;
-  email: string;
+  email?: string;
   phone: string;
   programInterest: string;
   city: string;
-  state: string;
   source: string;
 }

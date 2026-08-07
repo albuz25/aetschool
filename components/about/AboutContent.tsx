@@ -2,11 +2,10 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Award, Building2, GraduationCap, Target } from "lucide-react";
+import { Building2, GraduationCap, Target } from "lucide-react";
 
 import { Container } from "@/components/shared/Container";
 import { SectionHeading } from "@/components/shared/SectionHeading";
-import { AutodeskBadge } from "@/components/shared/AutodeskBadge";
 import { Button } from "@/components/ui/button";
 import { useLeadModalStore } from "@/store/useLeadModalStore";
 
@@ -52,8 +51,8 @@ export function AboutContent() {
               About AET School of Design
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-sm text-white/70 sm:text-base">
-              A vocational design and technology institute built on university partnerships and official
-              Autodesk training standards.
+              A vocational design and technology institute built on university partnerships and practical,
+              industry-relevant learning.
             </p>
           </motion.div>
         </Container>
@@ -97,22 +96,6 @@ export function AboutContent() {
                 </li>
               ))}
             </ul>
-          </div>
-        </Container>
-      </section>
-
-      <section className="bg-white py-16 sm:py-20">
-        <Container className="text-center">
-          <AutodeskBadge className="mx-auto" />
-          <h2 className="mx-auto mt-5 max-w-xl font-heading text-2xl font-bold text-navy sm:text-3xl">
-            An Authorized Autodesk Training Centre
-          </h2>
-          <p className="mx-auto mt-3 max-w-lg text-sm text-muted-foreground">
-            Beyond our university partnership, AET is also an Authorized Autodesk Training Centre — meaning our
-            software training follows official Autodesk standards from day one.
-          </p>
-          <div className="mt-6 flex justify-center gap-2">
-            <Award className="size-5 text-orange" />
           </div>
         </Container>
       </section>

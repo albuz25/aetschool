@@ -9,8 +9,8 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 const PILLARS = [
   {
     icon: Award,
-    title: "Autodesk Certified Faculty",
-    description: "Learn directly from instructors trained and certified on official Autodesk curriculum.",
+    title: "Industry-Experienced Faculty",
+    description: "Learn from instructors who bring practical design and technology experience into the classroom.",
   },
   {
     icon: GraduationCap,

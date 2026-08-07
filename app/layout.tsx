@@ -19,9 +19,9 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "AET School of Design | Authorized Autodesk Training Centre",
+  title: "AET School of Design | Design, Technology & Gen AI Programs",
   description:
-    "AET School of Design offers university-partnered B.Voc degrees and industry-aligned software skill packages in Animation, Interior Design, Data Science, Digital Marketing and more. Learn on official Autodesk software as an Authorized Autodesk Training Centre.",
+    "AET School of Design offers university-partnered B.Voc degrees and industry-aligned software skill packages in Animation, Interior Design, Data Science, Digital Marketing and more.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

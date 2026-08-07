@@ -8,7 +8,7 @@ export interface NavLink {
 export const mainNavLinks: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "Programs", href: "/programs" },
-  { label: "Autodesk ATC", href: "/autodesk-atc" },
+  { label: "Fine Arts", href: "/fine-arts" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -41,7 +41,7 @@ export const footerLinks = {
   packages: softwarePackages.map((p) => ({ title: p.shortTitle, slug: p.slug })),
   company: [
     { title: "About AET", href: "/about" },
-    { title: "Autodesk ATC", href: "/autodesk-atc" },
+    { title: "Fine Arts Programs", href: "/fine-arts" },
     { title: "Contact Us", href: "/contact" },
   ],
   legal: [

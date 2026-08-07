@@ -2,8 +2,7 @@ import { NextResponse } from "next/server";
 import { randomUUID } from "crypto";
 
 import { leadFormSchema } from "@/lib/validations/lead";
-
-// import { supabaseServerClient } from "@/lib/supabase/server";
+import { supabaseServerClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
   let body: unknown;
@@ -33,27 +32,28 @@ export async function POST(request: Request) {
   const lead = {
     id: randomUUID(),
     ...result.data,
-    receivedAt: new Date().toISOString(),
   };
 
-  try {
-    // Structured server-side log — replace/augment with your CRM, email (Resend) or
-    // webhook integration as needed. This keeps the lead flow fully functional today.
-    console.log("[AET Lead Captured]", JSON.stringify(lead, null, 2));
+  if (!supabaseServerClient) {
+    console.error("[AET Lead Error] Supabase environment variables are not configured.");
+    return NextResponse.json(
+      { success: false, error: "Enquiries are temporarily unavailable. Please call us directly." },
+      { status: 503 }
+    );
+  }
 
-    // TODO (next stage): insert into Supabase once project credentials are wired up.
-    // const { error } = await supabaseServerClient
-    //   .from("leads")
-    //   .insert({
-    //     name: lead.name,
-    //     email: lead.email,
-    //     phone: lead.phone,
-    //     program_interest: lead.programInterest,
-    //     city: lead.city,
-    //     state: lead.state,
-    //     source: lead.source,
-    //   });
-    // if (error) throw error;
+  try {
+    const { error } = await supabaseServerClient.from("leads").insert({
+      id: lead.id,
+      name: lead.name,
+      email: lead.email || null,
+      phone: lead.phone,
+      program_interest: lead.programInterest,
+      city: lead.city,
+      source: lead.source,
+    });
+
+    if (error) throw error;
 
     return NextResponse.json({ success: true, id: lead.id });
   } catch (error) {

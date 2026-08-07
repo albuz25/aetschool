@@ -4,6 +4,7 @@ export interface LeadModalContext {
   source: string;
   programSlug?: string;
   programTitle?: string;
+  programInterest?: string;
   heading?: string;
   subheading?: string;
 }

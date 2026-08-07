@@ -2,7 +2,6 @@
 
 import { CalendarCheck, Clock, GraduationCap, IndianRupee } from "lucide-react";
 import { InquiryForm } from "@/components/leads/InquiryForm";
-import { AutodeskBadge } from "@/components/shared/AutodeskBadge";
 import { Button } from "@/components/ui/button";
 import { useLeadModalStore } from "@/store/useLeadModalStore";
 import type { Program } from "@/lib/types";
@@ -16,9 +15,6 @@ export function StickyInquirySidebar({ program }: { program: Program }) {
       <div className="hidden lg:block">
         <div className="sticky top-24 space-y-4">
           <div className="rounded-2xl border border-border bg-white p-6 shadow-md">
-            {program.certificationBody ? (
-              <AutodeskBadge className="mb-3" variant="outline" />
-            ) : null}
             <h3 className="font-heading text-lg font-bold text-navy">{program.title}</h3>
             <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
               <li className="flex items-center gap-2">

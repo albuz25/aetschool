@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Clock, ArrowRight } from "lucide-react";
+import { Clock, ArrowRight, Download } from "lucide-react";
 
 import type { Program } from "@/lib/types";
 import { Badge } from "@/components/ui/badge";
@@ -82,6 +82,16 @@ export function ProgramCard({ program, index = 0 }: { program: Program; index?: 
           <ArrowRight className="size-4" />
         </Button>
       </div>
+      {program.brochurePath ? (
+        <a
+          href={program.brochurePath}
+          download
+          className="mt-3 inline-flex items-center justify-center gap-1.5 text-sm font-semibold text-blue hover:text-navy"
+        >
+          <Download className="size-4" />
+          Download Brochure
+        </a>
+      ) : null}
     </motion.div>
   );
 }

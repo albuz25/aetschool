@@ -1,10 +1,9 @@
 import Image from "next/image";
-import { Clock, GraduationCap } from "lucide-react";
+import { Clock, Download, GraduationCap } from "lucide-react";
 
 import type { Program } from "@/lib/types";
 import { Container } from "@/components/shared/Container";
 import { Badge } from "@/components/ui/badge";
-import { AutodeskBadge } from "@/components/shared/AutodeskBadge";
 import { SoftwareToolsGrid } from "@/components/programs/SoftwareToolsGrid";
 import { CurriculumAccordion } from "@/components/programs/CurriculumAccordion";
 import { CareerRoles } from "@/components/programs/CareerRoles";
@@ -12,10 +11,6 @@ import { StickyInquirySidebar } from "@/components/programs/StickyInquirySidebar
 import { FAQSection } from "@/components/home/FAQSection";
 
 export function ProgramDetailView({ program }: { program: Program }) {
-  const usesAutodesk = program.softwareTools.some((tool) =>
-    ["autocad", "revit", "3dsmax", "maya"].includes(tool.iconLabel)
-  );
-
   return (
     <div className="pb-24 lg:pb-16">
       <section className="relative overflow-hidden bg-navy">
@@ -32,7 +27,6 @@ export function ProgramDetailView({ program }: { program: Program }) {
             <Badge className="border-none bg-white/10 text-white">
               {program.type === "bvoc" ? "B.Voc Degree" : "Software Package"}
             </Badge>
-            {usesAutodesk ? <AutodeskBadge /> : null}
           </div>
           <h1 className="mt-4 max-w-2xl font-heading text-3xl font-extrabold text-white sm:text-4xl">
             {program.title}
@@ -50,6 +44,16 @@ export function ProgramDetailView({ program }: { program: Program }) {
               {program.eligibility}
             </span>
           </div>
+          {program.brochurePath ? (
+            <a
+              href={program.brochurePath}
+              download
+              className="mt-7 inline-flex h-10 items-center gap-2 rounded-lg bg-orange px-4 text-sm font-semibold text-white transition-colors hover:bg-orange-light"
+            >
+              <Download className="size-4" />
+              Download Brochure
+            </a>
+          ) : null}
         </Container>
       </section>
 

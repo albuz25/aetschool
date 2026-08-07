@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 import { Container } from "@/components/shared/Container";
-import { AutodeskBadge } from "@/components/shared/AutodeskBadge";
 import { footerLinks } from "@/data/navigation";
 import { CONTACT } from "@/lib/constants";
 
@@ -18,10 +17,9 @@ export function Footer() {
             <span className="font-heading text-base font-bold text-white">AET School of Design</span>
           </Link>
           <p className="mt-4 text-sm leading-relaxed text-white/60">
-            University-partnered B.Voc degrees and industry-aligned software skill packages, taught by an
-            Authorized Autodesk Training Centre.
+            University-partnered B.Voc degrees and industry-aligned software skill packages for creative and
+            technology careers.
           </p>
-          <AutodeskBadge className="mt-4" />
         </div>
 
         <FooterColumn
@@ -73,8 +71,8 @@ export function Footer() {
         </Container>
         <Container className="pb-6 text-[11px] leading-relaxed text-white/40">
           Disclaimer: Program names, durations, fees and university partnerships referenced on this site are
-          illustrative placeholders for demonstration purposes. Autodesk and all software product names are
-          trademarks of their respective owners.
+          illustrative placeholders for demonstration purposes. Software product names are trademarks of their
+          respective owners.
         </Container>
       </div>
     </footer>

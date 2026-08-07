@@ -8,7 +8,6 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { InquiryForm } from "@/components/leads/InquiryForm";
-import { AutodeskBadge } from "@/components/shared/AutodeskBadge";
 import { useLeadModalStore } from "@/store/useLeadModalStore";
 
 const SOURCE_COPY: Record<string, { heading: string; subheading: string }> = {
@@ -27,10 +26,6 @@ const SOURCE_COPY: Record<string, { heading: string; subheading: string }> = {
   "program-card": {
     heading: "Get Program Details",
     subheading: "Unlock the detailed curriculum, fee structure and scholarship info for this program.",
-  },
-  "autodesk-atc": {
-    heading: "Learn on Official Autodesk Software",
-    subheading: "Talk to our ATC counseling team about certification-ready programs.",
   },
   "check-fees": {
     heading: "Check Fees & Scholarships",
@@ -57,7 +52,6 @@ export function LeadCaptureModal() {
     <Dialog open={isOpen} onOpenChange={(open) => !open && close()}>
       <DialogContent className="max-h-[90vh] w-[calc(100%-2rem)] max-w-lg overflow-y-auto sm:max-w-lg">
         <DialogHeader>
-          <AutodeskBadge className="mb-1 w-fit" variant="outline" />
           <DialogTitle className="font-heading text-xl">
             {context?.programTitle ? `${copy.heading} — ${context.programTitle}` : copy.heading}
           </DialogTitle>
@@ -66,6 +60,7 @@ export function LeadCaptureModal() {
         <InquiryForm
           source={context?.source ?? "general"}
           programSlug={context?.programSlug}
+          initialProgramInterest={context?.programInterest}
           onSuccess={close}
         />
       </DialogContent>
