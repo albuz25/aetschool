@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { ChevronDown, GraduationCap, Menu, Wrench } from "lucide-react";
+import { ChevronDown, GraduationCap, Menu, Phone, Wrench } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -13,8 +13,10 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { Container } from "@/components/shared/Container";
+import { TopBar } from "@/components/layout/TopBar";
 import { mainNavLinks, megaMenuColumns } from "@/data/navigation";
 import { useLeadModalStore } from "@/store/useLeadModalStore";
+import { CONTACT } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export function Header() {
@@ -23,7 +25,9 @@ export function Header() {
   const openModal = useLeadModalStore((state) => state.open);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/80">
+    <div className="sticky top-0 z-50">
+      <TopBar />
+      <header className="border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/80">
       <Container className="flex h-16 items-center justify-between gap-4 lg:h-20">
         <Link href="/" className="flex shrink-0 items-center">
           <Image
@@ -102,12 +106,28 @@ export function Header() {
             ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2.5">
+          <a
+            href={`tel:${CONTACT.phoneTel}`}
+            className="hidden items-center gap-1.5 rounded-md px-2 py-1 text-sm font-semibold text-navy transition-colors hover:bg-muted md:inline-flex"
+          >
+            <Phone className="size-4 text-orange" />
+            {CONTACT.phoneDisplay}
+          </a>
           <Button
             className="hidden bg-orange text-white hover:bg-orange-light sm:inline-flex"
             onClick={() => openModal({ source: "header" })}
           >
             Enquire Now
+          </Button>
+          <Button
+            variant="outline"
+            size="icon"
+            className="sm:hidden"
+            onClick={() => (window.location.href = `tel:${CONTACT.phoneTel}`)}
+            aria-label="Call us"
+          >
+            <Phone className="size-4" />
           </Button>
           <Button
             variant="outline"
@@ -170,6 +190,7 @@ export function Header() {
           </div>
         </SheetContent>
       </Sheet>
-    </header>
+      </header>
+    </div>
   );
 }

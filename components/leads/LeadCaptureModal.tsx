@@ -27,6 +27,10 @@ const SOURCE_COPY: Record<string, { heading: string; subheading: string }> = {
     heading: "Get Program Details",
     subheading: "Unlock the detailed curriculum, fee structure and scholarship info for this program.",
   },
+  "demo-class": {
+    heading: "Book Your Free Demo Class",
+    subheading: "Pick a program and our counselor will schedule your free demo session.",
+  },
   "check-fees": {
     heading: "Check Fees & Scholarships",
     subheading: "Share your details and our team will send you the exact fee breakdown.",

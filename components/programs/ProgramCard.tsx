@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Clock, ArrowRight, Download } from "lucide-react";
+import { Clock, ArrowRight, Download, Wallet } from "lucide-react";
 
 import type { Program } from "@/lib/types";
 import { Badge } from "@/components/ui/badge";
@@ -21,15 +21,21 @@ export function ProgramCard({ program, index = 0 }: { program: Program; index?: 
       className="flex h-full flex-col rounded-2xl border border-border bg-white p-6 shadow-sm transition-shadow hover:shadow-lg"
     >
       <div className="flex items-center justify-between gap-2">
-        <Badge
-          className={
-            program.type === "bvoc"
-              ? "border-none bg-blue/10 text-blue"
-              : "border-none bg-orange/10 text-orange"
-          }
-        >
-          {program.type === "bvoc" ? "B.Voc Degree" : "Software Package"}
-        </Badge>
+        <div className="flex flex-wrap items-center gap-1.5">
+          <Badge
+            className={
+              program.type === "bvoc"
+                ? "border-none bg-blue/10 text-blue"
+                : "border-none bg-orange/10 text-orange"
+            }
+          >
+            {program.type === "bvoc" ? "B.Voc Degree" : "Software Package"}
+          </Badge>
+          <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold text-emerald-600">
+            <Wallet className="size-3" />
+            EMI Available
+          </span>
+        </div>
         <span className="flex items-center gap-1 text-xs text-muted-foreground">
           <Clock className="size-3.5" />
           {program.duration}
