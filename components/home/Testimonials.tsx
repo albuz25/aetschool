@@ -93,9 +93,6 @@ export function Testimonials() {
             <ChevronRight className="size-4" />
           </button>
         </div>
-        <p className="mt-4 text-center text-[11px] text-muted-foreground/60">
-          Names, quotes and ratings shown are illustrative placeholders for demonstration purposes.
-        </p>
       </Container>
     </section>
   );

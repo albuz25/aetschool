@@ -1,11 +1,14 @@
 "use client";
 
+import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { CheckCircle2, ArrowRight, Download } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { CheckCircle2, ArrowRight, Download, Search } from "lucide-react";
 
 import { Container } from "@/components/shared/Container";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { QuickLeadForm } from "@/components/leads/QuickLeadForm";
 import { useLeadModalStore } from "@/store/useLeadModalStore";
 
@@ -18,6 +21,14 @@ const HIGHLIGHTS = [
 
 export function HeroSection() {
   const openModal = useLeadModalStore((state) => state.open);
+  const router = useRouter();
+  const [query, setQuery] = useState("");
+
+  function handleSearch(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const trimmed = query.trim();
+    router.push(trimmed ? `/programs?search=${encodeURIComponent(trimmed)}` : "/programs");
+  }
 
   return (
     <section className="relative overflow-hidden bg-navy">
@@ -42,6 +53,22 @@ export function HeroSection() {
             AET School of Design offers university-partnered B.Voc degrees and industry-aligned software
             packages designed for practical, career-focused learning.
           </p>
+
+          <form onSubmit={handleSearch} className="mt-6 flex max-w-md gap-2">
+            <div className="relative flex-1">
+              <Search className="absolute top-1/2 left-3 size-4 -translate-y-1/2 text-white/50" />
+              <Input
+                value={query}
+                onChange={(event) => setQuery(event.target.value)}
+                placeholder="Search your favourite course today"
+                className="border-white/20 bg-white/10 pl-9 text-white placeholder:text-white/50 focus-visible:ring-orange"
+              />
+            </div>
+            <Button type="submit" className="bg-orange text-white hover:bg-orange-light">
+              <Search className="size-4" />
+              Search
+            </Button>
+          </form>
 
           <ul className="mt-6 space-y-3">
             {HIGHLIGHTS.map((item) => (

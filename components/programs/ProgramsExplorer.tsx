@@ -8,8 +8,14 @@ import type { ProgramType } from "@/lib/types";
 
 type FilterValue = ProgramType | "all";
 
-export function ProgramsExplorer({ initialType = "all" }: { initialType?: FilterValue }) {
-  const [search, setSearch] = useState("");
+export function ProgramsExplorer({
+  initialType = "all",
+  initialSearch = "",
+}: {
+  initialType?: FilterValue;
+  initialSearch?: string;
+}) {
+  const [search, setSearch] = useState(initialSearch);
   const [activeType, setActiveType] = useState<FilterValue>(initialType);
 
   const filteredPrograms = useMemo(() => {

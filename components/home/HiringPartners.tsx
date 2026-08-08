@@ -25,23 +25,25 @@ export function HiringPartners() {
           </div>
         </div>
 
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          {hiringPartners.map((name, index) => (
-            <motion.span
-              key={name}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: index * 0.05 }}
-              className="rounded-lg border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-white/80"
-            >
-              {name}
-            </motion.span>
-          ))}
+        <div
+          className="mt-8 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]"
+          aria-hidden={false}
+        >
+          <motion.div
+            className="flex w-max items-center gap-3"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ duration: 22, ease: "linear", repeat: Infinity }}
+          >
+            {[...hiringPartners, ...hiringPartners].map((name, index) => (
+              <span
+                key={`${name}-${index}`}
+                className="shrink-0 rounded-lg border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium whitespace-nowrap text-white/80"
+              >
+                {name}
+              </span>
+            ))}
+          </motion.div>
         </div>
-        <p className="mt-6 text-center text-[11px] text-white/40">
-          Names and figures shown are illustrative placeholders for demonstration purposes.
-        </p>
       </Container>
     </section>
   );

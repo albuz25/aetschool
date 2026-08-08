@@ -14,6 +14,11 @@ export default async function ProgramsPage(props: PageProps<"/programs">) {
   const typeParam = Array.isArray(searchParams?.type) ? searchParams?.type[0] : searchParams?.type;
   const initialType = typeParam === "bvoc" || typeParam === "package" ? typeParam : "all";
 
+  const searchQueryParam = Array.isArray(searchParams?.search)
+    ? searchParams?.search[0]
+    : searchParams?.search;
+  const initialSearch = searchQueryParam ?? "";
+
   return (
     <div className="bg-offwhite py-14 sm:py-20">
       <Container>
@@ -23,7 +28,7 @@ export default async function ProgramsPage(props: PageProps<"/programs">) {
           description="Browse our full catalog of university-partnered B.Voc degrees and short-term software skill packages."
         />
         <div className="mt-10">
-          <ProgramsExplorer initialType={initialType} />
+          <ProgramsExplorer initialType={initialType} initialSearch={initialSearch} />
         </div>
       </Container>
     </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Clock, ArrowRight, Download, Wallet } from "lucide-react";
@@ -8,6 +9,7 @@ import type { Program } from "@/lib/types";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useLeadModalStore } from "@/store/useLeadModalStore";
+import { getSoftwareLogo } from "@/lib/softwareLogos";
 
 export function ProgramCard({ program, index = 0 }: { program: Program; index?: number }) {
   const openModal = useLeadModalStore((state) => state.open);
@@ -46,14 +48,20 @@ export function ProgramCard({ program, index = 0 }: { program: Program; index?: 
       <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{program.tagline}</p>
 
       <div className="mt-4 flex flex-wrap gap-1.5">
-        {program.softwareTools.slice(0, 4).map((tool) => (
-          <span
-            key={tool.name}
-            className="rounded-md bg-muted px-2 py-1 text-[11px] font-medium text-navy/80"
-          >
-            {tool.name}
-          </span>
-        ))}
+        {program.softwareTools.slice(0, 4).map((tool) => {
+          const logo = getSoftwareLogo(tool.iconLabel);
+          return (
+            <span
+              key={tool.name}
+              className="inline-flex items-center gap-1.5 rounded-md bg-muted px-2 py-1 text-[11px] font-medium text-navy/80"
+            >
+              {logo ? (
+                <Image src={logo} alt="" width={16} height={16} className="size-4 shrink-0 object-contain" />
+              ) : null}
+              {tool.name}
+            </span>
+          );
+        })}
       </div>
 
       <ul className="mt-4 space-y-1.5">

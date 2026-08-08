@@ -31,9 +31,6 @@ export function TrustStats() {
             </motion.div>
           ))}
         </div>
-        <p className="mt-6 text-center text-[11px] text-muted-foreground/70">
-          Figures shown are illustrative placeholders for demonstration purposes.
-        </p>
       </Container>
     </section>
   );

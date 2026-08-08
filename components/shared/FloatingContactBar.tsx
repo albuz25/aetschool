@@ -1,6 +1,6 @@
 "use client";
 
-import { Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { useLeadModalStore } from "@/store/useLeadModalStore";
 import { CONTACT } from "@/lib/constants";
 
@@ -28,6 +28,13 @@ export function FloatingContactBar() {
         className="flex size-12 items-center justify-center rounded-full bg-blue text-white shadow-lg transition-transform hover:scale-105 active:scale-95"
       >
         <Phone className="size-5" />
+      </a>
+      <a
+        href={`mailto:${CONTACT.email}`}
+        aria-label="Email AET admissions"
+        className="flex size-12 items-center justify-center rounded-full bg-orange text-white shadow-lg transition-transform hover:scale-105 active:scale-95"
+      >
+        <Mail className="size-5" />
       </a>
     </div>
   );
