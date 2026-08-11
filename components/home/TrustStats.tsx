@@ -13,9 +13,9 @@ const STATS = [
 
 export function TrustStats() {
   return (
-    <section className="border-b border-border bg-white py-10">
+    <section className="bg-navy py-10">
       <Container>
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-4">
+        <div className="grid grid-cols-2 sm:grid-cols-4">
           {STATS.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -23,11 +23,15 @@ export function TrustStats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
-              className="flex flex-col items-center gap-2 text-center"
+              className={`flex flex-col items-center gap-2 border-white/10 px-4 py-4 text-center ${
+                index % 2 === 0 ? "border-r sm:border-r-0" : ""
+              } ${index < 2 ? "border-b sm:border-b-0" : ""} ${index > 0 ? "sm:border-l" : ""}`}
             >
-              <stat.icon className="size-6 text-orange" />
-              <p className="font-heading text-2xl font-extrabold text-navy sm:text-3xl">{stat.value}</p>
-              <p className="text-xs text-muted-foreground sm:text-sm">{stat.label}</p>
+              <stat.icon className="size-6 text-blue-light" />
+              <p className="font-heading text-2xl font-extrabold text-blue-light sm:text-3xl">{stat.value}</p>
+              <p className="text-xs font-semibold tracking-wide text-white/70 uppercase sm:text-sm">
+                {stat.label}
+              </p>
             </motion.div>
           ))}
         </div>

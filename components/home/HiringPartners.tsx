@@ -21,7 +21,7 @@ export function HiringPartners() {
           <div className="flex items-center gap-6">
             <Stat icon={Users} value="500+" label="Students Placed" />
             <Stat icon={Building2} value="50+" label="Hiring Partners" />
-            <Stat icon={Star} value="4.8★" label="Google Rating" />
+            <Stat icon={Star} value="4.8★" label="Google Rating" gold />
           </div>
         </div>
 
@@ -49,10 +49,24 @@ export function HiringPartners() {
   );
 }
 
-function Stat({ icon: Icon, value, label }: { icon: LucideIcon; value: string; label: string }) {
+function Stat({
+  icon: Icon,
+  value,
+  label,
+  gold = false,
+}: {
+  icon: LucideIcon;
+  value: string;
+  label: string;
+  gold?: boolean;
+}) {
   return (
     <div className="flex items-center gap-2">
-      <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-orange/15 text-orange">
+      <span
+        className={`flex size-9 shrink-0 items-center justify-center rounded-full ${
+          gold ? "bg-blue-light/15 text-blue-light" : "bg-orange/15 text-orange"
+        }`}
+      >
         <Icon className="size-4" />
       </span>
       <div className="text-left">

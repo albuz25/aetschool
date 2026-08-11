@@ -1,4 +1,5 @@
 import { HeroSection } from "@/components/home/HeroSection";
+import { HomeCounselingSection } from "@/components/home/HomeCounselingSection";
 import { ValuePropsStrip } from "@/components/home/ValuePropsStrip";
 import { TrustStats } from "@/components/home/TrustStats";
 import { QuickProgramsGrid } from "@/components/home/QuickProgramsGrid";
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <HomeCounselingSection />
       <ValuePropsStrip />
       <TrustStats />
       <QuickProgramsGrid />

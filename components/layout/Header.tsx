@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ChevronDown, GraduationCap, Menu, Phone, Wrench } from "lucide-react";
@@ -13,6 +12,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { Container } from "@/components/shared/Container";
+import { Logo } from "@/components/shared/Logo";
 import { TopBar } from "@/components/layout/TopBar";
 import { mainNavLinks, megaMenuColumns } from "@/data/navigation";
 import { useLeadModalStore } from "@/store/useLeadModalStore";
@@ -27,17 +27,10 @@ export function Header() {
   return (
     <div className="sticky top-0 z-50">
       <TopBar />
-      <header className="border-b border-border bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/80">
+      <header className="border-b border-white/10 bg-navy">
       <Container className="flex h-16 items-center justify-between gap-4 lg:h-20">
         <Link href="/" className="flex shrink-0 items-center">
-          <Image
-            src="/images/site/aet-logo.jpeg"
-            alt="AET School of Design"
-            width={160}
-            height={48}
-            priority
-            className="h-10 w-auto object-contain lg:h-12"
-          />
+          <Logo />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
@@ -47,7 +40,7 @@ export function Header() {
             onMouseLeave={() => setIsProgramsOpen(false)}
           >
             <button
-              className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-navy transition-colors hover:bg-muted"
+              className="flex items-center gap-1 rounded-md px-3 py-2 text-xs font-semibold tracking-wide text-white/85 uppercase transition-colors hover:bg-white/10 hover:text-white"
               aria-expanded={isProgramsOpen}
             >
               Programs
@@ -99,7 +92,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-md px-3 py-2 text-sm font-medium text-navy transition-colors hover:bg-muted"
+                className="rounded-md px-3 py-2 text-xs font-semibold tracking-wide text-white/85 uppercase transition-colors hover:bg-white/10 hover:text-white"
               >
                 {link.label}
               </Link>
@@ -109,9 +102,9 @@ export function Header() {
         <div className="flex items-center gap-2.5">
           <a
             href={`tel:${CONTACT.phoneTel}`}
-            className="hidden items-center gap-1.5 rounded-md px-2 py-1 text-sm font-semibold text-navy transition-colors hover:bg-muted md:inline-flex"
+            className="hidden items-center gap-1.5 rounded-md px-2 py-1 text-sm font-semibold text-white/85 transition-colors hover:bg-white/10 hover:text-white md:inline-flex"
           >
-            <Phone className="size-4 text-orange" />
+            <Phone className="size-4 text-blue-light" />
             {CONTACT.phoneDisplay}
           </a>
           <Button
@@ -123,7 +116,7 @@ export function Header() {
           <Button
             variant="outline"
             size="icon"
-            className="sm:hidden"
+            className="border-white/25 bg-transparent text-white hover:bg-white/10 hover:text-white sm:hidden"
             onClick={() => (window.location.href = `tel:${CONTACT.phoneTel}`)}
             aria-label="Call us"
           >
@@ -132,7 +125,7 @@ export function Header() {
           <Button
             variant="outline"
             size="icon"
-            className="lg:hidden"
+            className="border-white/25 bg-transparent text-white hover:bg-white/10 hover:text-white lg:hidden"
             onClick={() => setIsMobileOpen(true)}
             aria-label="Open menu"
           >
@@ -142,9 +135,11 @@ export function Header() {
       </Container>
 
       <Sheet open={isMobileOpen} onOpenChange={setIsMobileOpen}>
-        <SheetContent side="right" className="w-[85vw] sm:max-w-sm">
+        <SheetContent side="right" className="w-[85vw] border-white/10 bg-navy text-white sm:max-w-sm">
           <SheetHeader>
-            <SheetTitle>AET School of Design</SheetTitle>
+            <SheetTitle className="text-white">
+              <Logo />
+            </SheetTitle>
           </SheetHeader>
           <div className="flex flex-col gap-1 overflow-y-auto px-4 pb-6">
             {mainNavLinks.map((link) => (
@@ -152,16 +147,16 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsMobileOpen(false)}
-                className="rounded-md px-3 py-2.5 text-sm font-medium text-navy hover:bg-muted"
+                className="rounded-md px-3 py-2.5 text-xs font-semibold tracking-wide text-white/85 uppercase hover:bg-white/10 hover:text-white"
               >
                 {link.label}
               </Link>
             ))}
 
-            <div className="mt-2 border-t border-border pt-3">
+            <div className="mt-2 border-t border-white/10 pt-3">
               {megaMenuColumns.map((column) => (
                 <div key={column.heading} className="mb-4">
-                  <p className="mb-2 px-3 text-xs font-semibold tracking-wide text-muted-foreground uppercase">
+                  <p className="mb-2 px-3 text-xs font-semibold tracking-wide text-blue-light uppercase">
                     {column.heading}
                   </p>
                   {column.items.map((item) => (
@@ -169,7 +164,7 @@ export function Header() {
                       key={item.slug}
                       href={`/programs/${item.slug}`}
                       onClick={() => setIsMobileOpen(false)}
-                      className="block rounded-md px-3 py-2 text-sm text-navy hover:bg-muted"
+                      className="block rounded-md px-3 py-2 text-sm text-white/85 hover:bg-white/10 hover:text-white"
                     >
                       {item.title}
                     </Link>

@@ -1,4 +1,5 @@
 const BATCH_OFFSETS_DAYS = [7, 14, 21, 28];
+const SHORT_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 /**
  * Computes upcoming batch start dates relative to today, so the site never
@@ -9,7 +10,7 @@ export function getUpcomingBatchDates(count: number = BATCH_OFFSETS_DAYS.length)
 
   return BATCH_OFFSETS_DAYS.slice(0, count).map((offset) => {
     const date = new Date(today);
-    date.setDate(date.getDate() + offset);
-    return date.toLocaleDateString("en-IN", { day: "numeric", month: "short" });
+    date.setUTCDate(date.getUTCDate() + offset);
+    return `${date.getUTCDate()} ${SHORT_MONTHS[date.getUTCMonth()]}`;
   });
 }

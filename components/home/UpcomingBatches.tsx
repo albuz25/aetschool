@@ -5,7 +5,7 @@ import { CalendarDays, PhoneCall, Star } from "lucide-react";
 import { Container } from "@/components/shared/Container";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { Button } from "@/components/ui/button";
-import { getProgramIcon } from "@/components/home/QuickProgramsGrid";
+import { ProgramIconGlyph } from "@/components/home/QuickProgramsGrid";
 import { useLeadModalStore } from "@/store/useLeadModalStore";
 import { getProgramBySlug } from "@/data/courses";
 import { getUpcomingBatchDates } from "@/lib/batchDates";
@@ -37,15 +37,14 @@ export function UpcomingBatches() {
         />
         <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {batches.map(({ program, startDate }) => {
-            const Icon = getProgramIcon(program.slug);
             return (
               <div
                 key={program.slug}
                 className="flex flex-col rounded-2xl border border-border bg-white p-5 shadow-sm"
               >
                 <div className="flex items-center justify-between">
-                  <span className="flex size-10 items-center justify-center rounded-full bg-orange/10 text-orange">
-                    <Icon className="size-5" />
+                  <span className="flex size-10 items-center justify-center rounded-lg bg-orange text-white">
+                    <ProgramIconGlyph slug={program.slug} className="size-5" />
                   </span>
                   <span className="flex items-center gap-0.5 text-amber-400">
                     {Array.from({ length: 5 }).map((_, index) => (

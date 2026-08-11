@@ -34,9 +34,9 @@ export function Testimonials() {
             className="mx-0 max-w-xl"
           />
           <div className="flex shrink-0 items-center gap-2 rounded-full border border-border bg-white px-4 py-2 shadow-sm">
-            <div className="flex text-orange">
+            <div className="flex text-blue-light">
               {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="size-4 fill-orange" />
+                <Star key={i} className="size-4 fill-blue-light" />
               ))}
             </div>
             <span className="text-sm font-semibold text-navy">4.8</span>
@@ -64,9 +64,9 @@ export function Testimonials() {
                     <p className="font-heading text-sm font-semibold text-navy">{testimonial.name}</p>
                     <p className="text-xs text-muted-foreground">{testimonial.program}</p>
                   </div>
-                  <div className="flex shrink-0 text-orange">
+                  <div className="flex shrink-0 text-blue-light">
                     {Array.from({ length: testimonial.rating }).map((_, i) => (
-                      <Star key={i} className="size-3.5 fill-orange" />
+                      <Star key={i} className="size-3.5 fill-blue-light" />
                     ))}
                   </div>
                 </div>

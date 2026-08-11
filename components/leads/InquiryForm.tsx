@@ -96,16 +96,28 @@ export function InquiryForm({
     }
   }
 
+  const fieldGap = compact ? "space-y-1 sm:space-y-1.5" : "space-y-1.5";
+  const labelClass = compact ? "text-xs sm:text-sm" : undefined;
+
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={cn("space-y-4", className)} noValidate>
-      <div className={cn("grid gap-4", compact ? "grid-cols-1" : "grid-cols-1 sm:grid-cols-2")}>
-        <div className="space-y-1.5">
-          <Label htmlFor={`${source}-name`}>Full Name</Label>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className={cn(compact ? "space-y-2.5 sm:space-y-4" : "space-y-4", className)}
+      noValidate
+    >
+      <div
+        className={cn(
+          "grid",
+          compact ? "grid-cols-1 gap-2.5 sm:gap-4" : "grid-cols-1 gap-4 sm:grid-cols-2"
+        )}
+      >
+        <div className={fieldGap}>
+          <Label htmlFor={`${source}-name`} className={labelClass}>Full Name</Label>
           <Input id={`${source}-name`} placeholder="Your full name" {...register("name")} />
           {errors.name ? <FieldError message={errors.name.message} /> : null}
         </div>
-        <div className="space-y-1.5">
-          <Label htmlFor={`${source}-phone`}>Mobile Number</Label>
+        <div className={fieldGap}>
+          <Label htmlFor={`${source}-phone`} className={labelClass}>Mobile Number</Label>
           <Input
             id={`${source}-phone`}
             placeholder="10-digit mobile number"
@@ -116,21 +128,21 @@ export function InquiryForm({
         </div>
       </div>
 
-      <div className="space-y-1.5">
-          <Label htmlFor={`${source}-email`}>Email Address (optional)</Label>
+      <div className={fieldGap}>
+        <Label htmlFor={`${source}-email`} className={labelClass}>Email Address (optional)</Label>
         <Input id={`${source}-email`} type="email" placeholder="you@example.com" {...register("email")} />
         {errors.email ? <FieldError message={errors.email.message} /> : null}
       </div>
 
-      <div className="space-y-1.5">
-        <Label htmlFor={`${source}-program`}>Program Interest</Label>
+      <div className={fieldGap}>
+        <Label htmlFor={`${source}-program`} className={labelClass}>Program Interest</Label>
         <Select
           value={programInterest}
           onValueChange={(value) =>
             setValue("programInterest", value ?? "", { shouldValidate: true })
           }
         >
-          <SelectTrigger id={`${source}-program`} className="w-full">
+          <SelectTrigger id={`${source}-program`} className="w-full" size={compact ? "sm" : "default"}>
             <SelectValue placeholder="Select a program" />
           </SelectTrigger>
           <SelectContent>
@@ -145,15 +157,18 @@ export function InquiryForm({
         {errors.programInterest ? <FieldError message={errors.programInterest.message} /> : null}
       </div>
 
-      <div className="space-y-1.5">
-        <div className="space-y-1.5">
-          <Label htmlFor={`${source}-city`}>City</Label>
-          <Input id={`${source}-city`} placeholder="Your city" {...register("city")} />
-          {errors.city ? <FieldError message={errors.city.message} /> : null}
-        </div>
+      <div className={fieldGap}>
+        <Label htmlFor={`${source}-city`} className={labelClass}>City</Label>
+        <Input id={`${source}-city`} placeholder="Your city" {...register("city")} />
+        {errors.city ? <FieldError message={errors.city.message} /> : null}
       </div>
 
-      <Button type="submit" disabled={isSubmitting} className="w-full bg-orange text-white hover:bg-orange-light" size="lg">
+      <Button
+        type="submit"
+        disabled={isSubmitting}
+        className="w-full bg-orange text-white hover:bg-orange-light"
+        size={compact ? "default" : "lg"}
+      >
         {isSubmitting ? (
           <>
             <Loader2 className="size-4 animate-spin" />
@@ -166,7 +181,7 @@ export function InquiryForm({
           </>
         )}
       </Button>
-      <p className="text-center text-xs text-muted-foreground">
+      <p className={cn("text-center text-muted-foreground", compact ? "text-[11px]" : "text-xs")}>
         By submitting, you agree to be contacted by AET School of Design regarding admissions.
       </p>
     </form>

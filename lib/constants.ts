@@ -1,6 +1,6 @@
 export const CONTACT = {
-  phoneDisplay: "080 4804 8077",
-  phoneTel: "08048048077",
+  phoneDisplay: "080 4803 3035",
+  phoneTel: "08048033035",
   whatsappDisplay: "+91 95111 36660",
   whatsappNumber: "919511136660",
   email: "info@adveducare.in",

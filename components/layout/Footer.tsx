@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 import { Container } from "@/components/shared/Container";
+import { Logo } from "@/components/shared/Logo";
 import { footerLinks } from "@/data/navigation";
 import { CONTACT } from "@/lib/constants";
 
@@ -10,11 +11,8 @@ export function Footer() {
     <footer className="bg-navy text-white/80">
       <Container className="grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-5">
         <div className="sm:col-span-2 lg:col-span-1">
-          <Link href="/" className="flex items-center gap-2">
-            <span className="flex size-9 items-center justify-center rounded-lg bg-orange font-heading text-lg font-bold text-white">
-              AET
-            </span>
-            <span className="font-heading text-base font-bold text-white">AET School of Design</span>
+          <Link href="/" className="flex items-center">
+            <Logo />
           </Link>
           <p className="mt-4 text-sm leading-relaxed text-white/60">
             University-partnered B.Voc degrees and industry-aligned software skill packages for creative and
@@ -36,22 +34,22 @@ export function Footer() {
         />
 
         <div>
-          <p className="mb-3 text-sm font-semibold text-white">Get in Touch</p>
+          <p className="mb-3 text-xs font-semibold tracking-wide text-white uppercase">Get in Touch</p>
           <ul className="space-y-2.5 text-sm text-white/60">
             <li className="flex items-start gap-2">
-              <Phone className="mt-0.5 size-4 shrink-0" />
+              <Phone className="mt-0.5 size-4 shrink-0 text-blue-light" />
               <a href={`tel:${CONTACT.phoneTel}`} className="hover:text-white">
                 {CONTACT.phoneDisplay}
               </a>
             </li>
             <li className="flex items-start gap-2">
-              <Mail className="mt-0.5 size-4 shrink-0" />
+              <Mail className="mt-0.5 size-4 shrink-0 text-blue-light" />
               <a href={`mailto:${CONTACT.email}`} className="hover:text-white">
                 {CONTACT.email}
               </a>
             </li>
             <li className="flex items-start gap-2">
-              <MapPin className="mt-0.5 size-4 shrink-0" />
+              <MapPin className="mt-0.5 size-4 shrink-0 text-blue-light" />
               <span>{CONTACT.address}</span>
             </li>
           </ul>
@@ -88,7 +86,7 @@ function FooterColumn({
 }) {
   return (
     <div>
-      <p className="mb-3 text-sm font-semibold text-white">{heading}</p>
+      <p className="mb-3 text-xs font-semibold tracking-wide text-white uppercase">{heading}</p>
       <ul className="space-y-2.5 text-sm text-white/60">
         {links.map((link) => (
           <li key={link.href + link.title}>
