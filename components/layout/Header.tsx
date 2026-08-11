@@ -27,10 +27,10 @@ export function Header() {
   return (
     <div className="sticky top-0 z-50">
       <TopBar />
-      <header className="border-b border-white/10 bg-navy">
+      <header className="border-b border-border bg-white">
       <Container className="flex h-16 items-center justify-between gap-4 lg:h-20">
         <Link href="/" className="flex shrink-0 items-center">
-          <Logo />
+          <Logo theme="onLight" />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
@@ -40,7 +40,7 @@ export function Header() {
             onMouseLeave={() => setIsProgramsOpen(false)}
           >
             <button
-              className="flex items-center gap-1 rounded-md px-3 py-2 text-xs font-semibold tracking-wide text-white/85 uppercase transition-colors hover:bg-white/10 hover:text-white"
+              className="flex items-center gap-1 rounded-md px-3 py-2 text-xs font-semibold tracking-wide text-navy uppercase transition-colors hover:bg-muted"
               aria-expanded={isProgramsOpen}
             >
               Programs
@@ -92,7 +92,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-md px-3 py-2 text-xs font-semibold tracking-wide text-white/85 uppercase transition-colors hover:bg-white/10 hover:text-white"
+                className="rounded-md px-3 py-2 text-xs font-semibold tracking-wide text-navy uppercase transition-colors hover:bg-muted"
               >
                 {link.label}
               </Link>
@@ -102,9 +102,9 @@ export function Header() {
         <div className="flex items-center gap-2.5">
           <a
             href={`tel:${CONTACT.phoneTel}`}
-            className="hidden items-center gap-1.5 rounded-md px-2 py-1 text-sm font-semibold text-white/85 transition-colors hover:bg-white/10 hover:text-white md:inline-flex"
+            className="hidden items-center gap-1.5 rounded-md px-2 py-1 text-sm font-semibold text-navy transition-colors hover:bg-muted md:inline-flex"
           >
-            <Phone className="size-4 text-blue-light" />
+            <Phone className="size-4 text-orange" />
             {CONTACT.phoneDisplay}
           </a>
           <Button
@@ -116,7 +116,7 @@ export function Header() {
           <Button
             variant="outline"
             size="icon"
-            className="border-white/25 bg-transparent text-white hover:bg-white/10 hover:text-white sm:hidden"
+            className="sm:hidden"
             onClick={() => (window.location.href = `tel:${CONTACT.phoneTel}`)}
             aria-label="Call us"
           >
@@ -125,7 +125,7 @@ export function Header() {
           <Button
             variant="outline"
             size="icon"
-            className="border-white/25 bg-transparent text-white hover:bg-white/10 hover:text-white lg:hidden"
+            className="lg:hidden"
             onClick={() => setIsMobileOpen(true)}
             aria-label="Open menu"
           >
