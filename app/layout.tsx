@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { LeadCaptureModal } from "@/components/leads/LeadCaptureModal";
+import { SkillUpgradePopup } from "@/components/leads/SkillUpgradePopup";
 import { FloatingContactBar } from "@/components/shared/FloatingContactBar";
 import { Toaster } from "@/components/ui/sonner";
 
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main className="flex-1">{children}</main>
         <Footer />
         <LeadCaptureModal />
+        <SkillUpgradePopup />
         <FloatingContactBar />
         <Toaster position="top-center" richColors />
       </body>

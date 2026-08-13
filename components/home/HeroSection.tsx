@@ -100,7 +100,7 @@ export function HeroSection() {
         </Container>
 
         <div
-          className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 items-center gap-1.5 rounded-full border border-white/15 bg-navy/60 px-1.5 py-1 backdrop-blur-sm sm:bottom-4 sm:gap-2 sm:px-2 sm:py-1.5"
+          className="absolute bottom-2 left-1/2 z-10 flex -translate-x-1/2 items-center gap-0.5 rounded-full border border-white/15 bg-navy/60 px-1 py-0.5 backdrop-blur-sm sm:bottom-3 sm:gap-1 sm:px-1.5 sm:py-1"
           onFocus={() => setIsPaused(true)}
           onBlur={() => setIsPaused(false)}
         >
@@ -108,9 +108,9 @@ export function HeroSection() {
             type="button"
             onClick={() => changeSlide(-1)}
             aria-label="Previous hero image"
-            className="flex size-7 items-center justify-center rounded-full text-white/80 transition-colors hover:bg-white/15 hover:text-white"
+            className="flex size-5 items-center justify-center rounded-full text-white/80 transition-colors hover:bg-white/15 hover:text-white sm:size-6"
           >
-            <ChevronLeft className="size-4" />
+            <ChevronLeft className="size-3 sm:size-3.5" />
           </button>
           {HERO_SLIDES.map((src, index) => (
             <button
@@ -119,8 +119,8 @@ export function HeroSection() {
               onClick={() => setActiveSlide(index)}
               aria-label={`Show hero image ${index + 1}`}
               aria-current={index === activeSlide ? "true" : undefined}
-              className={`h-2 rounded-full transition-all ${
-                index === activeSlide ? "w-6 bg-orange" : "w-2 bg-white/50 hover:bg-white/80"
+              className={`h-1.5 rounded-full transition-all ${
+                index === activeSlide ? "w-4 bg-orange" : "w-1.5 bg-white/50 hover:bg-white/80"
               }`}
             />
           ))}
@@ -128,9 +128,9 @@ export function HeroSection() {
             type="button"
             onClick={() => changeSlide(1)}
             aria-label="Next hero image"
-            className="flex size-7 items-center justify-center rounded-full text-white/80 transition-colors hover:bg-white/15 hover:text-white"
+            className="flex size-5 items-center justify-center rounded-full text-white/80 transition-colors hover:bg-white/15 hover:text-white sm:size-6"
           >
-            <ChevronRight className="size-4" />
+            <ChevronRight className="size-3 sm:size-3.5" />
           </button>
         </div>
       </div>

@@ -2,12 +2,14 @@
 
 import { Mail, Phone } from "lucide-react";
 import { useLeadModalStore } from "@/store/useLeadModalStore";
+import { useSkillPopupStore } from "@/store/useSkillPopupStore";
 import { CONTACT } from "@/lib/constants";
 
 export function FloatingContactBar() {
   const isModalOpen = useLeadModalStore((state) => state.isOpen);
+  const isPopupOpen = useSkillPopupStore((state) => state.isOpen);
 
-  if (isModalOpen) return null;
+  if (isModalOpen || isPopupOpen) return null;
 
   return (
     <div className="fixed right-4 bottom-20 z-40 flex flex-col items-end gap-3 sm:right-6 lg:bottom-6">
