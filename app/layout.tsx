@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   title: "AET School of Design | Design, Technology & Gen AI Programs",
   description:
     "AET School of Design offers university-partnered B.Voc degrees and industry-aligned software skill packages in Animation, Interior Design, Data Science, Digital Marketing and more.",
+  icons: {
+    icon: "/favicon/favicon.png",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
