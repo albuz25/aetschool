@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { randomUUID } from "crypto";
 
 import { leadFormSchema } from "@/lib/validations/lead";
-import { supabaseServerClient } from "@/lib/supabase/server";
+import { getSupabaseServerClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
   let body: unknown;
@@ -33,6 +33,8 @@ export async function POST(request: Request) {
     id: randomUUID(),
     ...result.data,
   };
+
+  const supabaseServerClient = getSupabaseServerClient();
 
   if (!supabaseServerClient) {
     console.error("[AET Lead Error] Supabase environment variables are not configured.");
