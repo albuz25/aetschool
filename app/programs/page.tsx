@@ -2,12 +2,24 @@ import type { Metadata } from "next";
 import { Container } from "@/components/shared/Container";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { ProgramsExplorer } from "@/components/programs/ProgramsExplorer";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "All Programs | AET School of Design",
+export const metadata: Metadata = buildPageMetadata({
+  title: "All Programs",
   description:
     "Explore university-partnered B.Voc degrees and industry-aligned software skill packages offered by AET School of Design.",
-};
+  path: "/programs",
+  keywords: [
+    "AET programs",
+    "B.Voc courses Noida",
+    "Animation VFX course",
+    "Interior Design course",
+    "Digital Marketing course",
+    "Data Science course",
+    "Gen AI course",
+    "software skill packages",
+  ],
+});
 
 export default async function ProgramsPage(props: PageProps<"/programs">) {
   const searchParams = await props.searchParams;

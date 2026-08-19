@@ -7,6 +7,15 @@ import { LeadCaptureModal } from "@/components/leads/LeadCaptureModal";
 import { SkillUpgradePopup } from "@/components/leads/SkillUpgradePopup";
 import { FloatingContactBar } from "@/components/shared/FloatingContactBar";
 import { Toaster } from "@/components/ui/sonner";
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_KEYWORDS,
+  DEFAULT_TITLE,
+  OG_IMAGE,
+  SITE_NAME,
+  SITE_URL,
+  organizationJsonLd,
+} from "@/lib/seo";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -20,9 +29,36 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "AET School of Design | Design, Technology & Gen AI Programs",
-  description:
-    "AET School of Design offers university-partnered B.Voc degrees and industry-aligned software skill packages in Animation, Interior Design, Data Science, Digital Marketing and more.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: DEFAULT_TITLE,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: DEFAULT_DESCRIPTION,
+  applicationName: SITE_NAME,
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  keywords: DEFAULT_KEYWORDS,
+  category: "education",
+  robots: { index: true, follow: true },
+  alternates: { canonical: "/" },
+  formatDetection: { telephone: false },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    siteName: SITE_NAME,
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    url: SITE_URL,
+    images: [{ url: OG_IMAGE, alt: SITE_NAME }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
+    images: [OG_IMAGE],
+  },
   icons: {
     icon: [
       { url: "/favicon.ico", type: "image/x-icon" },
@@ -34,11 +70,19 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
+  const jsonLd = organizationJsonLd();
+
   return (
     <html
       lang="en"
       className={`${inter.variable} ${jakarta.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="flex min-h-full flex-col bg-background text-foreground">
         <Header />
         <main className="flex-1">{children}</main>

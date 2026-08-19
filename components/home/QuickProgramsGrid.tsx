@@ -15,6 +15,9 @@ const PROGRAM_ICONS: Record<string, ProgramIconName> = {
   "autodesk-revit-cad-package": "ruler",
   "gen-ai-creative-tech-package": "sparkle",
   "data-science-ai-package": "database",
+  "data-analytics-package": "bar-chart",
+  "power-bi-package": "bar-chart",
+  "sql-package": "database",
   "interior-design-3d-spatial-package": "boxes",
 };
 

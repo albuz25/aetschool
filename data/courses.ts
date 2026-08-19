@@ -428,57 +428,352 @@ export const softwarePackages: Program[] = [
   {
     slug: "data-science-ai-package",
     type: "package",
-    title: "Data Science & AI Package",
-    shortTitle: "Data Science & AI",
-    duration: "5 Months",
-    tagline: "Get job-ready with Python, SQL, Machine Learning and Power BI in one intensive package.",
+    title: "Data Science",
+    shortTitle: "Data Science",
+    duration: "6 Months",
+    tagline:
+      "Go from Python basics to machine learning and deep learning with SQL, statistics, and real dataset projects.",
     overview:
-      "A career-focused short-term program covering the practical data science toolkit — Python programming, SQL, machine learning fundamentals, and business intelligence dashboards — aimed at graduates and professionals seeking a quick, applied upskilling path.",
+      "A job-ready data science package covering Python programming, NumPy and Pandas, SQL and MongoDB, statistics and EDA, supervised and unsupervised machine learning, and deep learning with TensorFlow and CNNs. Classroom exercises, case studies and a capstone project run through every module.",
     heroImage: "/images/programs/data-science-ai.svg",
     softwareTools: [
       { name: "Python", iconLabel: "python" },
       { name: "SQL", iconLabel: "sql" },
-      { name: "Machine Learning (Scikit-learn)", iconLabel: "sklearn" },
-      { name: "Power BI", iconLabel: "powerbi" },
+      { name: "NumPy & Pandas", iconLabel: "python" },
+      { name: "Scikit-learn", iconLabel: "sklearn" },
+      { name: "TensorFlow", iconLabel: "sklearn" },
     ],
     highlights: [
-      "Beginner to job-ready in 5 months",
-      "Real dataset projects every module",
-      "Resume & interview preparation included",
+      "Six modules from Python to deep learning",
+      "Hands-on coding, SQL, MongoDB and ML case studies",
+      "Capstone project covering the full ML pipeline",
       "Certificate of Completion from AET",
     ],
     curriculum: [
       {
-        module: "Module 1: Python for Data Science",
-        topics: ["Python Fundamentals", "NumPy & Pandas", "Data Cleaning & Wrangling"],
+        module: "Module 1: Python",
+        topics: [
+          "Anaconda setup, Git & GitHub, Jupyter Notebook",
+          "Python syntax, operators, input/output and comments",
+          "Strings, conditionals, for/while loops, break and continue",
+          "Lists, tuples, dictionaries, indexing and slicing",
+          "Functions, lambda, modules, iterators and generators",
+          "File I/O, try-except-finally, custom exceptions and RegEx",
+        ],
       },
       {
-        module: "Module 2: SQL & Databases",
-        topics: ["Relational Database Concepts", "Writing Complex Queries", "Joins & Aggregations"],
+        module: "Module 2: Python Libraries",
+        topics: [
+          "NumPy arrays, indexing, reshaping, stacking and broadcasting",
+          "Statistical operations: mean, median, std dev and variance",
+          "Pandas Series and DataFrames; CSV, Excel and JSON import",
+          "Filtering, subsetting, renaming columns and type casting",
+          "Matplotlib plots, subplots, histograms and chart styling",
+          "Seaborn box, violin, pair and regression plots; module assessment",
+        ],
       },
       {
-        module: "Module 3: Machine Learning",
-        topics: ["Regression & Classification", "Model Evaluation", "Intro to Clustering"],
+        module: "Module 3: Database Systems (SQL & MongoDB)",
+        topics: [
+          "RDBMS basics; SELECT, WHERE, ORDER BY, DISTINCT, AND/OR",
+          "INNER, LEFT, RIGHT, FULL, CROSS and SELF JOINs; UNION",
+          "GROUP BY, HAVING, window/ranking functions and subqueries",
+          "SQL functions, variables, conditional logic and custom functions",
+          "MongoDB documents, BSON, CRUD, Compass and aggregation pipelines",
+        ],
       },
       {
-        module: "Module 4: Business Intelligence & Capstone",
-        topics: ["Power BI Dashboards", "Storytelling with Data", "Capstone Project & Portfolio"],
+        module: "Module 4: Statistics & EDA",
+        topics: [
+          "Probability, Bayes' theorem, binomial and normal distributions",
+          "Mean, median, mode, variance, IQR, skewness and kurtosis",
+          "Sampling methods, CLT, confidence intervals, Z vs T distributions",
+          "Hypothesis testing, p-values, Type I/II errors, t-tests, ANOVA",
+          "Vectors and matrices in Python; missing values and outlier treatment",
+          "Bivariate EDA with scatter plots and heatmaps",
+        ],
+      },
+      {
+        module: "Module 5: Machine Learning",
+        topics: [
+          "Supervised vs unsupervised vs reinforcement learning; train-test split",
+          "Missing-data handling, IQR/Z-score outliers, scaling and encoding",
+          "Logistic regression, KNN, SVM and Naive Bayes with evaluation metrics",
+          "Decision trees, Random Forest, bagging/boosting, GridSearchCV",
+          "K-Means, hierarchical clustering and PCA",
+          "Case studies: housing prices, spam, e-commerce and customer segmentation",
+        ],
+      },
+      {
+        module: "Module 6: Deep Learning",
+        topics: [
+          "Neural networks and TensorFlow constants, variables and graphs",
+          "Perceptrons, multi-layer ANNs and backpropagation",
+          "TensorBoard for experiment tracking",
+          "CNNs: filters, kernels, stride, padding, pooling and feature maps",
+          "Image classification pipeline and end-to-end capstone project",
+        ],
       },
     ],
     careerRoles: [
       "Data Analyst",
-      "Business Intelligence Executive",
-      "Junior ML Engineer",
+      "Junior Data Scientist",
+      "Machine Learning Trainee",
+      "Python Developer (Data)",
       "Reporting & Insights Analyst",
     ],
     faqs: [
       {
-        question: "Is this package suitable for working professionals switching careers?",
-        answer: "Yes, this package is specifically designed for graduates and working professionals looking for a fast, applied path into data roles, with flexible batch timings.",
+        question: "Do I need a coding or maths background to join?",
+        answer:
+          "No. Module 1 starts from Python setup and programming basics. Statistics and machine learning are taught with classroom exercises after the foundations are in place.",
+      },
+      {
+        question: "How is this different from the B.Voc in Data Science?",
+        answer:
+          "This is a 6-month software skill package focused on tools and projects. The B.Voc is a 3-year university-partnered degree. Counselors can help you choose based on your goals.",
       },
     ],
     certificationBody: "Certificate of Completion — AET School of Design",
     eligibility: "Graduates or final-year students from any stream; basic computer literacy required.",
+    fees: "Contact admissions for current fee structure and batch schedule.",
+  },
+  {
+    slug: "data-analytics-package",
+    type: "package",
+    title: "Data Analytics & Business Analytics",
+    shortTitle: "Data & Business Analytics",
+    duration: "5 Months",
+    tagline:
+      "Learn Python, Excel, SQL, statistics, Tableau and Power BI to turn business data into decisions.",
+    overview:
+      "A business-focused analytics package covering Python for analysis, NumPy and Pandas, advanced Excel, SQL and MongoDB, a studio hackathon sprint, applied statistics for A/B testing and forecasting, plus Tableau and Power BI dashboards. Built for graduates and working professionals who need reporting and insight skills, not a full data-science research track.",
+    heroImage: "/images/programs/data-science.svg",
+    softwareTools: [
+      { name: "Python", iconLabel: "python" },
+      { name: "SQL", iconLabel: "sql" },
+      { name: "Excel", iconLabel: "sql" },
+      { name: "Tableau", iconLabel: "tableau" },
+      { name: "Power BI", iconLabel: "powerbi" },
+    ],
+    highlights: [
+      "Python, Excel, SQL and BI tools in one package",
+      "Hackathon-style studio sprint with executive reporting",
+      "Tableau (14 hours) and Power BI (14 hours)",
+      "Certificate of Completion from AET",
+    ],
+    curriculum: [
+      {
+        module: "Module 1: Python Programming for Business Analytics",
+        topics: [
+          "Anaconda, Jupyter Notebooks, Git & GitHub basics",
+          "Variables, operators, user input and documentation comments",
+          "Strings, f-strings, if/elif/else, for and while loops",
+          "Lists, tuples, dictionaries; custom functions and modules",
+        ],
+      },
+      {
+        module: "Module 2: Python Libraries",
+        topics: [
+          "NumPy arrays, slicing and statistical operations",
+          "Pandas DataFrames; CSV, Excel and JSON import",
+          "Cleaning, filtering, grouping and KPI aggregation",
+          "Matplotlib and Seaborn executive charts; sales analysis case study",
+        ],
+      },
+      {
+        module: "Module 3: Advanced Excel, SQL & NoSQL Databases",
+        topics: [
+          "XLOOKUP, VLOOKUP, INDEX/MATCH, Pivot Tables, slicers and Goal Seek",
+          "RDBMS, keys, SELECT/WHERE/GROUP BY/HAVING and JOIN types",
+          "Subqueries and Top-N ranking for analytical reports",
+          "MongoDB documents, CRUD and Compass; Excel + SQL assignments",
+        ],
+      },
+      {
+        module: "Module 4: Business Analytics Hackathon & Studio Sprint",
+        topics: [
+          "Business briefs, KPI targets and multi-source data ingestion",
+          "Cleaning sprint: nulls, formatting, outliers and joins",
+          "Executive slide decks and interactive dashboards",
+          "Presenting recommendations to a peer evaluation panel",
+        ],
+      },
+      {
+        module: "Module 5: Applied Statistics & Business Decision Making",
+        topics: [
+          "Central tendency, dispersion, sampling and CLT",
+          "Normal distribution, Z-scores, confidence intervals",
+          "Hypothesis testing, p-values, Z/T and Chi-Square tests",
+          "Correlation, simple linear regression and A/B testing case studies",
+        ],
+      },
+      {
+        module: "Module 6: Business Intelligence — Tableau & Power BI",
+        topics: [
+          "Tableau: data connections, charts, dashboards, stories and filters",
+          "Tableau: sorting, sets, forecasting, clustering and geospatial maps",
+          "Power BI Desktop, Power Query, data model and DAX",
+          "Slicers, maps, customer segmentation dashboard and chart types",
+        ],
+      },
+    ],
+    careerRoles: [
+      "Data Analyst",
+      "Business Analyst",
+      "Business Intelligence Executive",
+      "Reporting Analyst",
+      "MIS Executive",
+    ],
+    faqs: [
+      {
+        question: "Is this the same as the Data Science package?",
+        answer:
+          "No. This package focuses on business reporting — Excel, SQL, statistics, Tableau and Power BI. The Data Science package goes further into machine learning and deep learning.",
+      },
+    ],
+    certificationBody: "Certificate of Completion — AET School of Design",
+    eligibility: "Open to students, graduates and working professionals. No prior coding experience required.",
+    fees: "Contact admissions for current fee structure and batch schedule.",
+  },
+  {
+    slug: "power-bi-package",
+    type: "package",
+    title: "Power BI",
+    shortTitle: "Power BI",
+    duration: "14 Hours",
+    tagline: "Build interactive Power BI dashboards with Power Query, data modeling and DAX.",
+    overview:
+      "A focused 14-hour Power BI package covering Desktop setup, data connections, Power Query, the data model, DAX, time-series analysis, slicers, maps and a customer analytics dashboard. Distilled from AET's business analytics BI studio so working professionals can ship executive reports quickly.",
+    heroImage: "/images/programs/data-science.svg",
+    softwareTools: [{ name: "Power BI", iconLabel: "powerbi" }],
+    highlights: [
+      "14-hour intensive Power BI studio",
+      "Power Query, data model and DAX",
+      "Customer segmentation dashboard project",
+      "Certificate of Completion from AET",
+    ],
+    curriculum: [
+      {
+        module: "Module 1: Getting Started with Power BI",
+        topics: [
+          "Installing Power BI Desktop and the interface",
+          "Data connection workflows and Data Model views",
+          "Query Editor (Power Query) and data modeling",
+        ],
+      },
+      {
+        module: "Module 2: Programming & DAX",
+        topics: [
+          "Time series analysis and aggregation vs granularity",
+          "Dynamic filters, slicers and interactive map visuals",
+          "Scatterplots and executive BI report layouts",
+        ],
+      },
+      {
+        module: "Module 3: Customer Analytics Dashboard",
+        topics: [
+          "Connecting datasets for customer analytics",
+          "Building a Customer Segmentation Dashboard",
+          "Analyzing customer cohort performance",
+        ],
+      },
+      {
+        module: "Module 4: Charts & Hands-on Assignments",
+        topics: [
+          "Bar, pie, donut, tree map and waterfall visuals",
+          "Table calculations and report polish",
+          "Assignment: publish a complete executive dashboard",
+        ],
+      },
+    ],
+    careerRoles: [
+      "Power BI Developer",
+      "Business Intelligence Executive",
+      "Reporting Analyst",
+      "MIS Executive",
+    ],
+    faqs: [
+      {
+        question: "Do I need Excel or SQL before this package?",
+        answer:
+          "Basic Excel helps, but it is not required. Data connections and Power Query are taught from scratch. For a fuller analytics path, see the Data Analytics & Business Analytics package.",
+      },
+    ],
+    certificationBody: "Certificate of Completion — AET School of Design",
+    eligibility: "Open to students and working professionals. Basic computer literacy required.",
+    fees: "Contact admissions for current fee structure and batch schedule.",
+  },
+  {
+    slug: "sql-package",
+    type: "package",
+    title: "SQL",
+    shortTitle: "SQL",
+    duration: "1 Month",
+    tagline: "Write production SQL — from SELECT and JOINs to window functions, then a short MongoDB intro.",
+    overview:
+      "A one-month SQL package extracted from AET's data science database module. You learn RDBMS design, single- and multi-table queries, aggregation, window functions and subqueries, then finish with MongoDB documents and aggregation pipelines so you can work with both relational and document data.",
+    heroImage: "/images/programs/data-science.svg",
+    softwareTools: [
+      { name: "SQL", iconLabel: "sql" },
+      { name: "MongoDB", iconLabel: "sql" },
+    ],
+    highlights: [
+      "Joins, grouping, window functions and subqueries",
+      "Hands-on multi-table reporting assignments",
+      "MongoDB CRUD, Compass and aggregation pipelines",
+      "Certificate of Completion from AET",
+    ],
+    curriculum: [
+      {
+        module: "Module 1: SQL & RDBMS Fundamentals",
+        topics: [
+          "RDBMS architecture and essential SQL operations",
+          "SELECT, WHERE, ORDER BY, DISTINCT and AND/OR",
+          "Primary keys, foreign keys and table relationships",
+        ],
+      },
+      {
+        module: "Module 2: Multi-table Queries",
+        topics: [
+          "INNER, LEFT, RIGHT, FULL OUTER, CROSS and SELF JOINs",
+          "UNION and set operators",
+          "Combining datasets for reporting",
+        ],
+      },
+      {
+        module: "Module 3: Advanced SQL & Analytics",
+        topics: [
+          "GROUP BY, HAVING and aggregation functions",
+          "Ranking and window functions for Top-N queries",
+          "Subqueries, nested logic and table partitioning",
+          "SQL functions, variables, conditional logic and custom functions",
+        ],
+      },
+      {
+        module: "Module 4: MongoDB Fundamentals",
+        topics: [
+          "NoSQL vs RDBMS; JSON/BSON, collections and Object IDs",
+          "CRUD operations, embedded documents and arrays",
+          "MongoDB Compass and multi-stage aggregation pipelines",
+        ],
+      },
+    ],
+    careerRoles: [
+      "SQL Developer",
+      "Data Analyst",
+      "Database Executive",
+      "Reporting Analyst",
+    ],
+    faqs: [
+      {
+        question: "Is this only SQL, or do we also cover NoSQL?",
+        answer:
+          "SQL is the core of the month. The last module is a practical MongoDB intro so you can query both relational tables and document collections.",
+      },
+    ],
+    certificationBody: "Certificate of Completion — AET School of Design",
+    eligibility: "Open to students and working professionals. No prior database experience required.",
     fees: "Contact admissions for current fee structure and batch schedule.",
   },
   {

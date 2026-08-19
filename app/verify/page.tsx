@@ -5,12 +5,20 @@ import type { CertificateLookupResult } from "@/lib/validations/certificate";
 import { Container } from "@/components/shared/Container";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { CertificateVerifyForm } from "@/components/verify/CertificateVerifyForm";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Verify Certificate | AET School of Design",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Verify Certificate",
   description:
     "Confirm the authenticity of an AET School of Design certificate by entering the certificate ID.",
-};
+  path: "/verify",
+  keywords: [
+    "AET certificate verification",
+    "verify AET certificate",
+    "AET School of Design certificate",
+    "certificate authenticity",
+  ],
+});
 
 export default async function VerifyPage(props: PageProps<"/verify">) {
   const searchParams = await props.searchParams;
