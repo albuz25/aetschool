@@ -25,6 +25,15 @@ export const DEFAULT_KEYWORDS = [
   "CAD Revit training",
   "university partnered degree",
   "software skill packages",
+  "Data Science course in Noida",
+  "data science institute Noida",
+  "data analytics course in Noida",
+  "Power BI course in Noida",
+  "SQL course in Noida",
+  "architecture design course in Noida",
+  "AutoCAD Revit course Noida",
+  "CAD training Sector 2 Noida",
+  "software training Delhi NCR",
 ];
 
 export function pageUrl(path: string) {
@@ -85,6 +94,12 @@ export function organizationJsonLd() {
       addressRegion: "Uttar Pradesh",
       postalCode: "201301",
       addressCountry: "IN",
+    },
+    areaServed: ["Noida", "Greater Noida", "Delhi NCR", "Ghaziabad"],
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 28.585,
+      longitude: 77.311,
     },
   };
 }

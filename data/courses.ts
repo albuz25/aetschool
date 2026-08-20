@@ -430,11 +430,13 @@ export const softwarePackages: Program[] = [
     type: "package",
     title: "Data Science",
     shortTitle: "Data Science",
+    seoH1: "Data Science Course in Noida",
+    localSeo: true,
     duration: "6 Months",
     tagline:
-      "Go from Python basics to machine learning and deep learning with SQL, statistics, and real dataset projects.",
+      "Classroom data science course in Noida — Python, SQL, machine learning and deep learning at AET Sector 2.",
     overview:
-      "A job-ready data science package covering Python programming, NumPy and Pandas, SQL and MongoDB, statistics and EDA, supervised and unsupervised machine learning, and deep learning with TensorFlow and CNNs. Classroom exercises, case studies and a capstone project run through every module.",
+      "AET School of Design runs a 6-month data science course in Noida for students and working professionals across Delhi NCR. Classroom training at Sector 2 covers Python programming, NumPy and Pandas, SQL and MongoDB, statistics and EDA, supervised and unsupervised machine learning, and deep learning with TensorFlow and CNNs. Case studies and a capstone project run through every module so you can apply the same Python machine learning workflow used in NCR analytics teams.",
     heroImage: "/images/programs/data-science-ai.svg",
     softwareTools: [
       { name: "Python", iconLabel: "python" },
@@ -444,10 +446,11 @@ export const softwarePackages: Program[] = [
       { name: "TensorFlow", iconLabel: "sklearn" },
     ],
     highlights: [
-      "Six modules from Python to deep learning",
-      "Hands-on coding, SQL, MongoDB and ML case studies",
+      "Classroom data science institute in Noida (Sector 2)",
+      "Six modules from Python to machine learning and deep learning",
+      "Hands-on SQL, MongoDB and ML case studies",
       "Capstone project covering the full ML pipeline",
-      "Certificate of Completion from AET",
+      "EMI options; weekday and counselor-scheduled batches",
     ],
     curriculum: [
       {
@@ -524,14 +527,29 @@ export const softwarePackages: Program[] = [
     ],
     faqs: [
       {
+        question: "Where is the data science course in Noida held?",
+        answer:
+          "Classes run at AET School of Design, B-134, Lower Ground Floor, Sector 2, Noida 201301. The campus is reachable from Greater Noida, Ghaziabad and other Delhi NCR locations.",
+      },
+      {
         question: "Do I need a coding or maths background to join?",
         answer:
-          "No. Module 1 starts from Python setup and programming basics. Statistics and machine learning are taught with classroom exercises after the foundations are in place.",
+          "No. Module 1 of this Python machine learning course in Noida starts from setup and programming basics. Statistics and ML are taught with classroom exercises after the foundations are in place.",
+      },
+      {
+        question: "Is this classroom training or only online?",
+        answer:
+          "This is an offline data science institute format in Noida — instructor-led classroom batches with lab practice. Speak with admissions for the current weekday or working-professional schedule.",
       },
       {
         question: "How is this different from the B.Voc in Data Science?",
         answer:
           "This is a 6-month software skill package focused on tools and projects. The B.Voc is a 3-year university-partnered degree. Counselors can help you choose based on your goals.",
+      },
+      {
+        question: "Is EMI available for the data science course in Noida?",
+        answer:
+          "Yes. AET offers EMI options on this package. Call 080 4803 3061 or visit the Sector 2 campus for the current fee and batch dates.",
       },
     ],
     certificationBody: "Certificate of Completion — AET School of Design",
@@ -543,11 +561,13 @@ export const softwarePackages: Program[] = [
     type: "package",
     title: "Data Analytics & Business Analytics",
     shortTitle: "Data & Business Analytics",
+    seoH1: "Data Analytics Course in Noida",
+    localSeo: true,
     duration: "5 Months",
     tagline:
-      "Learn Python, Excel, SQL, statistics, Tableau and Power BI to turn business data into decisions.",
+      "Data analyst course in Noida with Excel, SQL, Python, Tableau and Power BI — classroom training at Sector 2.",
     overview:
-      "A business-focused analytics package covering Python for analysis, NumPy and Pandas, advanced Excel, SQL and MongoDB, a studio hackathon sprint, applied statistics for A/B testing and forecasting, plus Tableau and Power BI dashboards. Built for graduates and working professionals who need reporting and insight skills, not a full data-science research track.",
+      "This 5-month data analytics course in Noida is built for graduates and working professionals who need reporting skills, not a full machine-learning track. Classroom batches at AET Sector 2 cover Python for analysis, advanced Excel, SQL, statistics, Tableau and Power BI. Students from Greater Noida and Delhi NCR use the same Excel–SQL–Power BI stack that NCR MIS and BI teams hire for.",
     heroImage: "/images/programs/data-science.svg",
     softwareTools: [
       { name: "Python", iconLabel: "python" },
@@ -557,10 +577,11 @@ export const softwarePackages: Program[] = [
       { name: "Power BI", iconLabel: "powerbi" },
     ],
     highlights: [
-      "Python, Excel, SQL and BI tools in one package",
+      "Data analytics institute format in Noida (classroom, Sector 2)",
+      "Excel, SQL, Python, Tableau and Power BI in one course",
       "Hackathon-style studio sprint with executive reporting",
       "Tableau (14 hours) and Power BI (14 hours)",
-      "Certificate of Completion from AET",
+      "EMI options for working professionals across Delhi NCR",
     ],
     curriculum: [
       {
@@ -627,9 +648,24 @@ export const softwarePackages: Program[] = [
     ],
     faqs: [
       {
+        question: "Is this a data analytics course in Noida or only online?",
+        answer:
+          "It is classroom training at AET School of Design, Sector 2, Noida. Counselors can share the current weekday and working-professional batch timings.",
+      },
+      {
+        question: "Does the data analyst course cover Excel, SQL and Power BI?",
+        answer:
+          "Yes. The syllabus includes advanced Excel, SQL reporting queries, Python for analysis, Tableau dashboards and a dedicated Power BI studio — the combination most Noida and Delhi NCR analyst roles list.",
+      },
+      {
         question: "Is this the same as the Data Science package?",
         answer:
           "No. This package focuses on business reporting — Excel, SQL, statistics, Tableau and Power BI. The Data Science package goes further into machine learning and deep learning.",
+      },
+      {
+        question: "Can working professionals from Greater Noida join?",
+        answer:
+          "Yes. The campus is in Sector 2, Noida, with EMI options. Speak with admissions for batch times that fit a working schedule.",
       },
     ],
     certificationBody: "Certificate of Completion — AET School of Design",
@@ -641,17 +677,20 @@ export const softwarePackages: Program[] = [
     type: "package",
     title: "Power BI",
     shortTitle: "Power BI",
+    seoH1: "Power BI Course in Noida",
+    localSeo: true,
     duration: "14 Hours",
-    tagline: "Build interactive Power BI dashboards with Power Query, data modeling and DAX.",
+    tagline:
+      "Power BI training institute in Noida — 14-hour classroom course on Power Query, DAX and dashboards.",
     overview:
-      "A focused 14-hour Power BI package covering Desktop setup, data connections, Power Query, the data model, DAX, time-series analysis, slicers, maps and a customer analytics dashboard. Distilled from AET's business analytics BI studio so working professionals can ship executive reports quickly.",
+      "AET’s Power BI course in Noida is a 14-hour classroom studio at Sector 2. You cover Desktop setup, data connections, Power Query, the data model, DAX, time-series analysis, slicers, maps and a customer analytics dashboard. Distilled from the business analytics BI module so working professionals in Delhi NCR can ship executive reports without a full 5-month analytics package.",
     heroImage: "/images/programs/data-science.svg",
     softwareTools: [{ name: "Power BI", iconLabel: "powerbi" }],
     highlights: [
-      "14-hour intensive Power BI studio",
-      "Power Query, data model and DAX",
+      "Power BI training in Noida at Sector 2 campus",
+      "14-hour intensive: Power Query, data model and DAX",
       "Customer segmentation dashboard project",
-      "Certificate of Completion from AET",
+      "Classroom batches for working professionals",
     ],
     curriculum: [
       {
@@ -695,9 +734,19 @@ export const softwarePackages: Program[] = [
     ],
     faqs: [
       {
-        question: "Do I need Excel or SQL before this package?",
+        question: "Where is the Power BI course in Noida conducted?",
         answer:
-          "Basic Excel helps, but it is not required. Data connections and Power Query are taught from scratch. For a fuller analytics path, see the Data Analytics & Business Analytics package.",
+          "At AET School of Design, B-134, Lower Ground Floor, Sector 2, Noida. This is instructor-led classroom training, not a recorded-only course.",
+      },
+      {
+        question: "Do I need Excel or SQL before this Power BI training?",
+        answer:
+          "Basic Excel helps, but it is not required. Data connections and Power Query are taught from scratch. For Excel + SQL + Tableau + Power BI together, see the Data Analytics course in Noida.",
+      },
+      {
+        question: "How long is the Power BI training institute schedule?",
+        answer:
+          "The package is 14 hours of classroom studio time, typically scheduled for working professionals. Call admissions for the next Sector 2 batch.",
       },
     ],
     certificationBody: "Certificate of Completion — AET School of Design",
@@ -709,20 +758,23 @@ export const softwarePackages: Program[] = [
     type: "package",
     title: "SQL",
     shortTitle: "SQL",
+    seoH1: "SQL Course in Noida",
+    localSeo: true,
     duration: "1 Month",
-    tagline: "Write production SQL — from SELECT and JOINs to window functions, then a short MongoDB intro.",
+    tagline:
+      "SQL training in Noida — one-month classroom course on joins, window functions and reporting queries.",
     overview:
-      "A one-month SQL package extracted from AET's data science database module. You learn RDBMS design, single- and multi-table queries, aggregation, window functions and subqueries, then finish with MongoDB documents and aggregation pipelines so you can work with both relational and document data.",
+      "This SQL course in Noida is a one-month classroom package at AET Sector 2, drawn from the data science database module. You learn RDBMS design, single- and multi-table queries, aggregation, window functions and subqueries, then finish with MongoDB documents and aggregation pipelines. Built for analysts and working professionals in Delhi NCR who need production SQL, not a full data science track.",
     heroImage: "/images/programs/data-science.svg",
     softwareTools: [
       { name: "SQL", iconLabel: "sql" },
       { name: "MongoDB", iconLabel: "sql" },
     ],
     highlights: [
+      "SQL training in Noida — classroom batches at Sector 2",
       "Joins, grouping, window functions and subqueries",
       "Hands-on multi-table reporting assignments",
       "MongoDB CRUD, Compass and aggregation pipelines",
-      "Certificate of Completion from AET",
     ],
     curriculum: [
       {
@@ -767,9 +819,19 @@ export const softwarePackages: Program[] = [
     ],
     faqs: [
       {
+        question: "Is the SQL course in Noida classroom-based?",
+        answer:
+          "Yes. SQL training runs at AET School of Design, Sector 2, Noida, with instructor-led lab practice. EMI and batch timings are available through admissions.",
+      },
+      {
         question: "Is this only SQL, or do we also cover NoSQL?",
         answer:
           "SQL is the core of the month. The last module is a practical MongoDB intro so you can query both relational tables and document collections.",
+      },
+      {
+        question: "Do I need prior database experience?",
+        answer:
+          "No. The SQL training in Noida starts from RDBMS basics and SELECT queries, then moves to joins and window functions used in NCR reporting roles.",
       },
     ],
     certificationBody: "Certificate of Completion — AET School of Design",
@@ -781,10 +843,13 @@ export const softwarePackages: Program[] = [
     type: "package",
     title: "Architecture Design",
     shortTitle: "Architecture Design",
+    seoH1: "Architecture Design Course in Noida",
+    localSeo: true,
     duration: "4 Months",
-    tagline: "Master the complete interior visualization stack: AutoCAD, SketchUp, 3ds Max, V-Ray and Revit.",
+    tagline:
+      "Architecture design course in Noida — AutoCAD, Revit, SketchUp, 3ds Max and V-Ray at Sector 2.",
     overview:
-      "A software-focused package for aspiring interior designers and visualizers who want deep, hands-on mastery of the industry's core design and rendering tools.",
+      "AET’s 4-month architecture design course in Noida is classroom CAD and BIM training at Sector 2. You work through AutoCAD drafting, SketchUp and 3ds Max modeling, V-Ray rendering and Autodesk Revit — the same stack used by Noida and Delhi NCR studios for interiors, working drawings and visualization. Built for design students and working professionals who need software depth, not a full interior-design degree.",
     heroImage: "/images/programs/interior-3d.svg",
     softwareTools: [
       { name: "AutoCAD", iconLabel: "autocad" },
@@ -794,10 +859,10 @@ export const softwarePackages: Program[] = [
       { name: "Autodesk Revit", iconLabel: "revit" },
     ],
     highlights: [
-      "Hands-on design and visualization software training",
-      "Covers full visualization pipeline end-to-end",
-      "Photorealistic rendering with V-Ray",
-      "Certificate of Completion from AET",
+      "AutoCAD and Revit course in Noida (classroom, Sector 2)",
+      "3ds Max, SketchUp and V-Ray visualization pipeline",
+      "Photorealistic rendering and BIM with Revit",
+      "Portfolio project for CAD and BIM studio roles in Delhi NCR",
     ],
     curriculum: [
       {
@@ -825,8 +890,24 @@ export const softwarePackages: Program[] = [
     ],
     faqs: [
       {
+        question: "Is this an architecture design course in Noida or only software demos?",
+        answer:
+          "It is a 4-month classroom package at AET Sector 2 covering AutoCAD, Revit, SketchUp, 3ds Max and V-Ray with a capstone visualization project — not a recorded demo series.",
+      },
+      {
+        question: "Do you teach AutoCAD and Revit in the same course?",
+        answer:
+          "Yes. Module 1 is 2D drafting in AutoCAD; Module 4 is BIM with Revit. SketchUp, 3ds Max and V-Ray sit in between so you can take a project from plan to render.",
+      },
+      {
         question: "Is this the right package if I already have a design degree?",
-        answer: "Yes, this package is popular with design graduates who want to specialize deeply in the software/visualization side of interior design.",
+        answer:
+          "Yes. Design graduates in Noida and Delhi NCR often join for the CAD, BIM and visualization stack used in local studios.",
+      },
+      {
+        question: "Can working professionals attend 3ds Max and SketchUp training in Noida?",
+        answer:
+          "Yes. Batches run at the Sector 2 campus. Ask admissions about weekday timings and EMI for this architecture design course.",
       },
     ],
     certificationBody: "Certificate of Completion — AET School of Design",

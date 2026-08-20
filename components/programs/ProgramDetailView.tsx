@@ -1,7 +1,9 @@
 import Image from "next/image";
-import { Clock, Download, GraduationCap } from "lucide-react";
+import { Clock, Download, GraduationCap, MapPin } from "lucide-react";
 
 import type { Program } from "@/lib/types";
+import { CONTACT } from "@/lib/constants";
+import { courseJsonLd, faqJsonLd } from "@/lib/localSeo";
 import { Container } from "@/components/shared/Container";
 import { Badge } from "@/components/ui/badge";
 import { SoftwareToolsGrid } from "@/components/programs/SoftwareToolsGrid";
@@ -11,12 +13,29 @@ import { StickyInquirySidebar } from "@/components/programs/StickyInquirySidebar
 import { FAQSection } from "@/components/home/FAQSection";
 
 export function ProgramDetailView({ program }: { program: Program }) {
+  const heading = program.seoH1 ?? program.title;
+  const courseSchema = program.localSeo ? courseJsonLd(program) : null;
+  const faqSchema = program.localSeo ? faqJsonLd(program) : null;
+
   return (
     <div className="pb-24 lg:pb-16">
+      {courseSchema ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }}
+        />
+      ) : null}
+      {faqSchema ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      ) : null}
+
       <section className="relative overflow-hidden bg-navy">
         <Image
           src={program.heroImage}
-          alt={program.title}
+          alt={heading}
           fill
           priority
           className="object-cover opacity-40"
@@ -29,7 +48,7 @@ export function ProgramDetailView({ program }: { program: Program }) {
             </Badge>
           </div>
           <h1 className="mt-4 max-w-2xl font-heading text-3xl font-extrabold text-white sm:text-4xl">
-            {program.title}
+            {heading}
           </h1>
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-white/70 sm:text-base">
             {program.tagline}
@@ -62,6 +81,20 @@ export function ProgramDetailView({ program }: { program: Program }) {
           <div>
             <h2 className="font-heading text-xl font-bold text-navy">Program Overview</h2>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{program.overview}</p>
+            {program.localSeo ? (
+              <div className="mt-5 rounded-xl border border-navy/10 bg-navy/[0.03] p-4 sm:p-5">
+                <p className="flex items-start gap-2 font-heading text-sm font-bold text-navy">
+                  <MapPin className="mt-0.5 size-4 shrink-0 text-orange" />
+                  Training in Sector 2, Noida
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  Classroom batches at {CONTACT.address}. Students commute from Greater Noida,
+                  Ghaziabad and other Delhi NCR locations. Instructor-led labs, EMI options, and
+                  counselor-scheduled timings for working professionals. Call {CONTACT.phoneDisplay}{" "}
+                  to confirm the next batch.
+                </p>
+              </div>
+            ) : null}
             <ul className="mt-5 grid grid-cols-1 gap-2 sm:grid-cols-2">
               {program.highlights.map((highlight) => (
                 <li

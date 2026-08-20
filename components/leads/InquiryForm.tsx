@@ -6,6 +6,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { Loader2, Send } from "lucide-react";
 
+import { trackGoogleAdsConversion } from "@/lib/googleAds";
 import { leadFormSchema, type LeadFormValues } from "@/lib/validations/lead";
 import { allPrograms } from "@/data/courses";
 import { Input } from "@/components/ui/input";
@@ -77,6 +78,7 @@ export function InquiryForm({
         throw new Error(data.error ?? "Something went wrong. Please try again.");
       }
 
+      trackGoogleAdsConversion();
       toast.success("Thanks! Our counseling team will reach out shortly.", {
         description: "Check your email for the brochure and program details.",
       });
@@ -134,28 +136,32 @@ export function InquiryForm({
         {errors.email ? <FieldError message={errors.email.message} /> : null}
       </div>
 
-      <div className={fieldGap}>
-        <Label htmlFor={`${source}-program`} className={labelClass}>Program Interest</Label>
-        <Select
-          value={programInterest}
-          onValueChange={(value) =>
-            setValue("programInterest", value ?? "", { shouldValidate: true })
-          }
-        >
-          <SelectTrigger id={`${source}-program`} className="w-full" size={compact ? "sm" : "default"}>
-            <SelectValue placeholder="Select a program" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="diploma-fine-arts">Diploma in Fine Arts</SelectItem>
-            {allPrograms.map((program) => (
-              <SelectItem key={program.slug} value={program.slug}>
-                {program.shortTitle}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-        {errors.programInterest ? <FieldError message={errors.programInterest.message} /> : null}
-      </div>
+      {!programSlug ? (
+        <div className={fieldGap}>
+          <Label htmlFor={`${source}-program`} className={labelClass}>Program Interest</Label>
+          <Select
+            value={programInterest}
+            onValueChange={(value) =>
+              setValue("programInterest", value ?? "", { shouldValidate: true })
+            }
+          >
+            <SelectTrigger id={`${source}-program`} className="w-full" size={compact ? "sm" : "default"}>
+              <SelectValue placeholder="Select a program" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="diploma-fine-arts">Diploma in Fine Arts</SelectItem>
+              {allPrograms.map((program) => (
+                <SelectItem key={program.slug} value={program.slug}>
+                  {program.shortTitle}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          {errors.programInterest ? <FieldError message={errors.programInterest.message} /> : null}
+        </div>
+      ) : (
+        <input type="hidden" {...register("programInterest")} />
+      )}
 
       <div className={fieldGap}>
         <Label htmlFor={`${source}-city`} className={labelClass}>City</Label>

@@ -37,6 +37,10 @@ export interface Program {
   certificationBody?: string;
   eligibility: string;
   fees: string;
+  /** Visible H1 for local SEO (cards still use title/shortTitle) */
+  seoH1?: string;
+  /** Show the Sector 2 Noida campus copy block on the program page */
+  localSeo?: boolean;
 }
 
 export interface LeadPayload {

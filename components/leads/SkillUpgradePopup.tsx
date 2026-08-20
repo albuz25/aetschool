@@ -11,6 +11,7 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { trackGoogleAdsConversion } from "@/lib/googleAds";
 import { useLeadModalStore } from "@/store/useLeadModalStore";
 import { useSkillPopupStore } from "@/store/useSkillPopupStore";
 
@@ -86,6 +87,7 @@ export function SkillUpgradePopup() {
         throw new Error(data.error ?? "Something went wrong. Please try again.");
       }
 
+      trackGoogleAdsConversion();
       toast.success("Thanks! Our counseling team will reach out shortly.");
       reset();
       dismiss();

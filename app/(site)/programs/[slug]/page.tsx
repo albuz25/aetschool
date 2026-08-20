@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { allPrograms, getProgramBySlug } from "@/data/courses";
 import { ProgramDetailView } from "@/components/programs/ProgramDetailView";
+import { isLocalSeoSlug, localSeoMeta } from "@/lib/localSeo";
 import { buildPageMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
@@ -17,6 +18,16 @@ export async function generateMetadata(
 
   if (!program) {
     return { title: "Program Not Found" };
+  }
+
+  if (isLocalSeoSlug(program.slug)) {
+    const local = localSeoMeta[program.slug];
+    return buildPageMetadata({
+      title: local.title,
+      description: local.description,
+      path: `/programs/${program.slug}`,
+      keywords: local.keywords,
+    });
   }
 
   return buildPageMetadata({
