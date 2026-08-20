@@ -779,8 +779,8 @@ export const softwarePackages: Program[] = [
   {
     slug: "interior-design-3d-spatial-package",
     type: "package",
-    title: "Interior Design & 3D Spatial Package",
-    shortTitle: "Interior Design & 3D Spatial",
+    title: "Architecture Design",
+    shortTitle: "Architecture Design",
     duration: "4 Months",
     tagline: "Master the complete interior visualization stack: AutoCAD, SketchUp, 3ds Max, V-Ray and Revit.",
     overview:
