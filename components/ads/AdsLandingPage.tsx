@@ -136,9 +136,9 @@ function EnquiryCard({
   programTitle: string;
 }) {
   return (
-    <div className="rounded-2xl border border-border bg-white p-4 shadow-xl sm:p-6">
+    <div className="rounded-2xl border border-border bg-white p-4 text-foreground shadow-xl sm:p-6">
       <h2 className="font-heading text-lg font-bold text-navy">Get free counseling</h2>
-      <p className="mt-1 text-sm text-muted-foreground">
+      <p className="mt-1 text-sm text-foreground">
         For {programTitle}. We will share fees, batches and EMI on your call.
       </p>
       <div className="mt-4">
@@ -149,7 +149,7 @@ function EnquiryCard({
           submitLabel="Get Free Counseling"
         />
       </div>
-      <div className="mt-3 flex items-center gap-2 text-[11px] text-muted-foreground">
+      <div className="mt-3 flex items-center gap-2 text-[11px] text-foreground">
         <ShieldCheck className="size-3.5 shrink-0 text-blue" />
         Your number is only used by AET admissions.
       </div>

@@ -99,7 +99,7 @@ export function InquiryForm({
   }
 
   const fieldGap = compact ? "space-y-1 sm:space-y-1.5" : "space-y-1.5";
-  const labelClass = compact ? "text-xs sm:text-sm" : undefined;
+  const labelClass = compact ? "text-xs text-foreground sm:text-sm" : "text-foreground";
 
   return (
     <form
@@ -187,7 +187,7 @@ export function InquiryForm({
           </>
         )}
       </Button>
-      <p className={cn("text-center text-muted-foreground", compact ? "text-[11px]" : "text-xs")}>
+      <p className={cn("text-center text-foreground", compact ? "text-[11px]" : "text-xs")}>
         By submitting, you agree to be contacted by AET School of Design regarding admissions.
       </p>
     </form>
