@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Phone } from "lucide-react";
 
+import { LeadChatWidget } from "@/components/leads/LeadChatWidget";
 import { Logo } from "@/components/shared/Logo";
 import { CONTACT } from "@/lib/constants";
 
@@ -33,6 +34,7 @@ export default function AdsLayout({ children }: { children: ReactNode }) {
         </div>
       </header>
       <main className="flex-1">{children}</main>
+      <LeadChatWidget />
       <footer className="border-t border-border bg-navy py-5 text-center text-xs text-white/60">
         <p>AET School of Design · {CONTACT.address}</p>
         <p className="mt-1">

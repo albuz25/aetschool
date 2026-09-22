@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { LeadCaptureModal } from "@/components/leads/LeadCaptureModal";
 import { SkillUpgradePopup } from "@/components/leads/SkillUpgradePopup";
+import { LeadChatWidget } from "@/components/leads/LeadChatWidget";
 import { FloatingContactBar } from "@/components/shared/FloatingContactBar";
 
 export default function SiteLayout({ children }: { children: ReactNode }) {
@@ -14,6 +15,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
       <Footer />
       <LeadCaptureModal />
       <SkillUpgradePopup />
+      <LeadChatWidget />
       <FloatingContactBar />
     </>
   );
