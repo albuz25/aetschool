@@ -25,11 +25,10 @@ export function HomeCounselingSection() {
         <div className="max-w-xl">
           <p className="text-xs font-semibold tracking-wide text-orange uppercase">Admissions Open</p>
           <h2 className="mt-3 font-heading text-3xl leading-tight font-bold text-navy sm:text-4xl">
-            Find the right program for your career
+            Find the right course for your career
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-            Explore career-focused degrees and software programs, or speak with our counselors for
-            personalized guidance.
+            Explore career-focused courses, or speak with our counselors for personalized guidance.
           </p>
 
           <form onSubmit={handleSearch} className="mt-7 flex max-w-lg flex-col gap-2 sm:flex-row">
@@ -38,7 +37,7 @@ export function HomeCounselingSection() {
               <Input
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                placeholder="Search programs or software"
+                placeholder="Search courses or software"
                 className="h-11 bg-white pl-9"
               />
             </div>

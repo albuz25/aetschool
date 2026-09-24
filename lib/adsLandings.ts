@@ -17,7 +17,7 @@ export const adsLandings: AdsLandingCopy[] = [
     programSlug: "data-science-ai-package",
     headline: "Data Science Course in Noida — Python, SQL, ML & Deep Learning",
     subhead:
-      "6-month job-ready package at AET School of Design. Live projects, counselor callback, EMI available.",
+      "6-month job-ready course at AET School of Design. Live projects, counselor callback, EMI available.",
     bullets: [
       "6 months: Python to machine learning and deep learning",
       "SQL, MongoDB, statistics, Scikit-learn and TensorFlow",
@@ -25,14 +25,14 @@ export const adsLandings: AdsLandingCopy[] = [
       "Noida campus · Certificate of Completion · EMI available",
     ],
     source: "google-ads-data-science",
-    testimonialPrograms: ["Data Science & AI Package", "B.Voc Digital Marketing"],
+    testimonialPrograms: ["Data Science"],
   },
   {
     slug: "data-analytics",
     programSlug: "data-analytics-package",
     headline: "Data Analytics Course in Noida — Excel, SQL, Tableau & Power BI",
     subhead:
-      "5-month business analytics package. Turn data into dashboards and decisions. Free counseling this week.",
+      "5-month business analytics course. Turn data into dashboards and decisions. Free counseling this week.",
     bullets: [
       "5 months: Python, Excel, SQL, statistics and BI tools",
       "Tableau (14 hrs) + Power BI (14 hrs) in the same program",
@@ -40,14 +40,14 @@ export const adsLandings: AdsLandingCopy[] = [
       "Noida campus · Certificate of Completion · EMI available",
     ],
     source: "google-ads-data-analytics",
-    testimonialPrograms: ["Data Science & AI Package", "B.Voc Digital Marketing"],
+    testimonialPrograms: ["Data Science", "Data Analytics & Business Analytics"],
   },
   {
     slug: "architecture-design",
     programSlug: "interior-design-3d-spatial-package",
     headline: "Architecture Design Course in Noida — AutoCAD, SketchUp, Revit & V-Ray",
     subhead:
-      "4-month visualization package for architects and interior designers. Portfolio-ready 3D skills.",
+      "4-month visualization course for architects and interior designers. Portfolio-ready 3D skills.",
     bullets: [
       "4 months: AutoCAD, SketchUp, 3ds Max, V-Ray and Revit",
       "Full 2D-to-3D visualization pipeline",
@@ -55,7 +55,7 @@ export const adsLandings: AdsLandingCopy[] = [
       "Noida campus · Certificate of Completion · EMI available",
     ],
     source: "google-ads-architecture-design",
-    testimonialPrograms: ["Autodesk Revit & CAD Package", "B.Voc Interior Design"],
+    testimonialPrograms: ["Autodesk Revit & CAD Course", "Architecture Design"],
   },
 ];
 

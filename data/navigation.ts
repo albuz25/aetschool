@@ -1,4 +1,4 @@
-import { bvocPrograms, softwarePackages } from "@/data/courses";
+import { courses } from "@/data/courses";
 
 export interface NavLink {
   label: string;
@@ -8,40 +8,51 @@ export interface NavLink {
 export const mainNavLinks: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "Programs", href: "/programs" },
-  { label: "Fine Arts", href: "/fine-arts" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
 
+const dataCourses = courses.filter((program) =>
+  [
+    "data-science-ai-package",
+    "data-analytics-package",
+    "power-bi-package",
+    "sql-package",
+    "gen-ai-creative-tech-package",
+  ].includes(program.slug)
+);
+
+const designCourses = courses.filter((program) =>
+  ["autodesk-revit-cad-package", "interior-design-3d-spatial-package"].includes(program.slug)
+);
+
 export const megaMenuColumns = [
   {
-    heading: "University Degrees (B.Voc)",
-    description: "3-year degrees awarded with our university partner",
-    items: bvocPrograms.map((program) => ({
+    heading: "Data & AI Courses",
+    description: "Analytics, SQL, Power BI and generative AI",
+    items: dataCourses.map((program) => ({
       title: program.shortTitle,
       slug: program.slug,
       duration: program.duration,
     })),
-    viewAllHref: "/programs?type=bvoc",
+    viewAllHref: "/programs",
   },
   {
-    heading: "Software Packages & Certifications",
-    description: "Short-term, job-focused skill packages",
-    items: softwarePackages.map((program) => ({
+    heading: "Design Courses",
+    description: "CAD, BIM and architecture visualization",
+    items: designCourses.map((program) => ({
       title: program.shortTitle,
       slug: program.slug,
       duration: program.duration,
     })),
-    viewAllHref: "/programs?type=package",
+    viewAllHref: "/programs",
   },
 ];
 
 export const footerLinks = {
-  programs: bvocPrograms.map((p) => ({ title: p.shortTitle, slug: p.slug })),
-  packages: softwarePackages.map((p) => ({ title: p.shortTitle, slug: p.slug })),
+  courses: courses.map((p) => ({ title: p.shortTitle, slug: p.slug })),
   company: [
     { title: "About AET", href: "/about" },
-    { title: "Fine Arts Programs", href: "/fine-arts" },
     { title: "Contact Us", href: "/contact" },
   ],
   legal: [

@@ -8,23 +8,18 @@ export const OG_IMAGE = "/images/site/aet-logo.jpeg";
 
 export const DEFAULT_TITLE = "AET School of Design | Design, Technology & Gen AI Programs";
 export const DEFAULT_DESCRIPTION =
-  "AET School of Design offers university-partnered B.Voc degrees and industry-aligned software skill packages in Animation, Interior Design, Data Science, Digital Marketing and more.";
+  "AET School of Design offers industry-aligned courses in Data Science, Data Analytics, Architecture Design, Revit & CAD, Power BI, SQL and Gen AI in Noida.";
 
 export const DEFAULT_KEYWORDS = [
   "AET School of Design",
   "AET Noida",
   "design school Noida",
-  "B.Voc Noida",
   "admissions Noida",
-  "Animation and VFX course",
   "Interior Design course",
-  "Fine Arts course",
-  "Digital Marketing course",
   "Data Science course",
   "Gen AI course",
   "CAD Revit training",
-  "university partnered degree",
-  "software skill packages",
+  "software courses Noida",
   "Data Science course in Noida",
   "data science institute Noida",
   "data analytics course in Noida",

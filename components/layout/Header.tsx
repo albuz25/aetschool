@@ -53,7 +53,7 @@ export function Header() {
                   {megaMenuColumns.map((column) => (
                     <div key={column.heading}>
                       <div className="mb-3 flex items-center gap-2">
-                        {column.heading.includes("Degree") ? (
+                        {column.heading.includes("Design") ? (
                           <GraduationCap className="size-4 text-orange" />
                         ) : (
                           <Wrench className="size-4 text-blue" />

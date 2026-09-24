@@ -1,4 +1,4 @@
-export type ProgramType = "bvoc" | "package";
+export type ProgramType = "course";
 
 export interface SoftwareTool {
   name: string;
@@ -31,9 +31,9 @@ export interface Program {
   faqs?: ProgramFAQ[];
   /** Public brochure PDF path, when available for this program */
   brochurePath?: string;
-  /** University partner offering accreditation, only for B.Voc programs */
+  /** University partner offering accreditation */
   accreditation?: string;
-  /** Certifying body for short-term software packages */
+  /** Certifying body for short-term courses */
   certificationBody?: string;
   eligibility: string;
   fees: string;

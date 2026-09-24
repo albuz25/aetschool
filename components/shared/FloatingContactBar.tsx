@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import { useLeadModalStore } from "@/store/useLeadModalStore";
 import { useSkillPopupStore } from "@/store/useSkillPopupStore";
 import { CONTACT } from "@/lib/constants";
@@ -12,7 +12,7 @@ export function FloatingContactBar() {
   if (isModalOpen || isPopupOpen) return null;
 
   return (
-    <div className="fixed right-4 bottom-20 z-40 flex flex-col items-end gap-3 sm:right-6 lg:bottom-6">
+    <div className="fixed right-3 bottom-[max(0.5rem,env(safe-area-inset-bottom))] z-40 flex flex-row items-end gap-3 sm:right-6 sm:bottom-6 sm:flex-col">
       <a
         href={`https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent(
           "Hi AET, I'd like to know more about your programs."
@@ -30,13 +30,6 @@ export function FloatingContactBar() {
         className="flex size-12 items-center justify-center rounded-full bg-blue text-white shadow-lg transition-transform hover:scale-105 active:scale-95"
       >
         <Phone className="size-5" />
-      </a>
-      <a
-        href={`mailto:${CONTACT.email}`}
-        aria-label="Email AET admissions"
-        className="flex size-12 items-center justify-center rounded-full bg-orange text-white shadow-lg transition-transform hover:scale-105 active:scale-95"
-      >
-        <Mail className="size-5" />
       </a>
     </div>
   );

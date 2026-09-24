@@ -43,9 +43,7 @@ export function ProgramDetailView({ program }: { program: Program }) {
         <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/40" />
         <Container className="relative py-14 sm:py-20">
           <div className="flex flex-wrap items-center gap-2">
-            <Badge className="border-none bg-white/10 text-white">
-              {program.type === "bvoc" ? "B.Voc Degree" : "Software Package"}
-            </Badge>
+            <Badge className="border-none bg-white/10 text-white">Course</Badge>
           </div>
           <h1 className="mt-4 max-w-2xl font-heading text-3xl font-extrabold text-white sm:text-4xl">
             {heading}

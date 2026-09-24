@@ -25,10 +25,10 @@ const VALUES = [
 ];
 
 const PARTNERSHIP_POINTS = [
-  "B.Voc degrees are jointly designed and awarded with our university partner under the National Skills Qualification Framework (NSQF).",
-  "Curriculum reviewed periodically to stay aligned with evolving industry and university standards.",
-  "Graduates receive a recognized university degree alongside practical, portfolio-ready skills.",
-  "Credit transfer and further academic progression pathways available for eligible students.",
+  "Classroom courses are designed around the software and workflows used in Noida and Delhi NCR studios and analytics teams.",
+  "Curriculum is reviewed periodically so tools, projects and case studies stay current with industry practice.",
+  "Every course builds a portfolio-ready project and ends with a Certificate of Completion from AET School of Design.",
+  "Counselors help you pick a single focused course or a longer career track such as Data Science or Architecture Design.",
 ];
 
 export function AboutContent() {
@@ -51,8 +51,7 @@ export function AboutContent() {
               About AET School of Design
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-sm text-white/70 sm:text-base">
-              A vocational design and technology institute built on university partnerships and practical,
-              industry-relevant learning.
+              A vocational design and technology institute built on practical, industry-relevant learning.
             </p>
           </motion.div>
         </Container>
@@ -77,15 +76,15 @@ export function AboutContent() {
       <section className="bg-offwhite py-16 sm:py-20">
         <Container>
           <SectionHeading
-            eyebrow="University Partnership"
-            title="Accredited Degrees, Backed by University Standards"
-            description="Our B.Voc programs are not standalone diplomas — they are awarded through a formal university partnership."
+            eyebrow="How We Teach"
+            title="Practical Courses, Built for Real Work"
+            description="Our classroom courses combine current software workflows, live projects and placement-oriented mentoring."
           />
           <div className="mx-auto mt-10 max-w-2xl rounded-2xl border border-blue/20 bg-blue/5 p-7">
             <div className="flex items-center gap-3">
               <Building2 className="size-6 text-blue" />
               <p className="font-heading text-base font-semibold text-navy">
-                University Partnership Accreditation Notice
+                Industry-ready classroom training
               </p>
             </div>
             <ul className="mt-5 space-y-3">
@@ -104,7 +103,7 @@ export function AboutContent() {
         <Container className="text-center">
           <h2 className="font-heading text-2xl font-bold sm:text-3xl">Want to Know More About AET?</h2>
           <p className="mx-auto mt-3 max-w-lg text-sm text-white/70">
-            Reach out to our team to learn more about our university partnerships, faculty and campus facilities.
+            Reach out to our team to learn more about our courses, faculty and campus facilities.
           </p>
           <Button
             size="lg"

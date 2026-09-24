@@ -3,7 +3,7 @@ import { Container } from "@/components/shared/Container";
 
 const VALUE_PROPS = [
   { icon: Briefcase, label: "Learn Job-Ready Skills" },
-  { icon: GraduationCap, label: "Earn a Recognized Degree" },
+  { icon: GraduationCap, label: "Earn a Certificate" },
   { icon: LayoutGrid, label: "Build Your Portfolio" },
   { icon: LifeBuoy, label: "Get Placement Support" },
 ];

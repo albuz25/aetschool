@@ -29,7 +29,7 @@ export function Testimonials() {
           <SectionHeading
             eyebrow="Student Success"
             title="What Our Students Say"
-            description="Real feedback shared by learners across our B.Voc degrees and software packages."
+            description="Real feedback shared by learners across our courses."
             align="left"
             className="mx-0 max-w-xl"
           />

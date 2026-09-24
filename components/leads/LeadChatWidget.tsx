@@ -47,6 +47,11 @@ export function LeadChatWidget() {
   const listRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const timer = window.setTimeout(() => setOpen(true), 800);
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
     listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: "smooth" });
   }, [messages, step, open]);
 
@@ -136,7 +141,7 @@ export function LeadChatWidget() {
   }
 
   return (
-    <div className="fixed bottom-20 left-4 z-50 sm:bottom-6">
+    <div className="fixed bottom-[max(0.5rem,env(safe-area-inset-bottom))] left-3 z-50 sm:bottom-6 sm:left-4">
       <AnimatePresence>
         {open ? (
           <motion.div
@@ -149,7 +154,13 @@ export function LeadChatWidget() {
             <div className="flex items-center justify-between bg-navy px-4 py-3 text-white">
               <div>
                 <p className="font-heading text-sm font-bold">AET Admissions</p>
-                <p className="text-[11px] text-white/70">Usually replies instantly</p>
+                <p className="mt-0.5 flex items-center gap-1.5 text-[11px] text-white/70">
+                  <span className="relative flex size-2">
+                    <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                    <span className="relative inline-flex size-2 rounded-full bg-emerald-400" />
+                  </span>
+                  Online now
+                </p>
               </div>
               <button
                 type="button"
@@ -241,9 +252,15 @@ export function LeadChatWidget() {
         type="button"
         onClick={() => setOpen((current) => !current)}
         aria-label={open ? "Close chat" : "Chat with admissions"}
-        className="flex size-14 items-center justify-center rounded-full bg-orange text-white shadow-lg transition-transform hover:scale-105 active:scale-95"
+        className="relative flex size-14 items-center justify-center rounded-full bg-orange text-white shadow-lg transition-transform hover:scale-105 active:scale-95"
       >
         {open ? <X className="size-6" /> : <MessageCircle className="size-6" />}
+        {!open ? (
+          <span className="absolute top-0.5 right-0.5 flex size-3">
+            <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+            <span className="relative inline-flex size-3 rounded-full bg-emerald-500 ring-2 ring-white" />
+          </span>
+        ) : null}
       </button>
     </div>
   );

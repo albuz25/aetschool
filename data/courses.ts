@@ -5,322 +5,16 @@ interface ProgramFAQGeneral {
   answer: string;
 }
 
-export const bvocPrograms: Program[] = [
-  {
-    slug: "bvoc-animation-vfx",
-    type: "bvoc",
-    title: "B.Voc in Animation & VFX",
-    shortTitle: "Animation & VFX",
-    duration: "3 Years (6 Semesters)",
-    tagline: "Turn imagination into frame-by-frame reality with industry-grade animation and VFX pipelines.",
-    overview:
-      "This university-partnered B.Voc degree builds a strong foundation in 2D/3D animation, visual effects, compositing and game art, blended with real production-studio workflows. Students graduate with an accredited degree and a portfolio reel ready for studio hiring.",
-    heroImage: "/images/programs/animation-vfx.svg",
-    softwareTools: [
-      { name: "Autodesk Maya", iconLabel: "maya" },
-      { name: "Adobe After Effects", iconLabel: "aftereffects" },
-      { name: "Autodesk 3ds Max", iconLabel: "3dsmax" },
-      { name: "Nuke", iconLabel: "nuke" },
-      { name: "Adobe Photoshop", iconLabel: "photoshop" },
-    ],
-    highlights: [
-      "University-recognized 3-year degree",
-      "Studio-style production pipeline training",
-      "Showreel & portfolio development in final year",
-      "Industry mentorship from working VFX artists",
-    ],
-    curriculum: [
-      {
-        module: "Semester 1-2: Foundations",
-        topics: ["Principles of Animation", "Drawing & Visual Storytelling", "Digital Illustration", "Intro to 3D Space & Modeling"],
-      },
-      {
-        module: "Semester 3-4: Core Production Skills",
-        topics: ["3D Modeling & Texturing (Maya, 3ds Max)", "Rigging & Character Animation", "Lighting & Rendering", "Compositing Fundamentals (After Effects)"],
-      },
-      {
-        module: "Semester 5: Specialization",
-        topics: ["VFX & Motion Graphics", "Simulation (Fluids, Cloth, Particles)", "Editing & Sound Design", "Game Asset Pipeline"],
-      },
-      {
-        module: "Semester 6: Capstone & Industry Project",
-        topics: ["Studio Internship / Live Project", "Portfolio & Showreel Production", "Industry Presentation & Placement Prep"],
-      },
-    ],
-    careerRoles: [
-      "3D Animator",
-      "VFX Compositor",
-      "Character Rigger",
-      "Motion Graphics Artist",
-      "Game Art Designer",
-      "Storyboard Artist",
-    ],
-    faqs: [
-      {
-        question: "Do I need prior drawing skills to join this program?",
-        answer: "No prior professional experience is required. The first two semesters build your foundational drawing and visual storytelling skills from scratch.",
-      },
-      {
-        question: "Is this degree recognized by universities/UGC bodies?",
-        answer: "Yes, the B.Voc is awarded in partnership with our affiliated university and follows UGC-aligned vocational education norms.",
-      },
-    ],
-    accreditation: "Awarded in partnership with a UGC-recognized university under the National Skills Qualification Framework (NSQF).",
-    eligibility: "10+2 in any stream from a recognized board.",
-    fees: "Contact admissions for current semester-wise fee structure and scholarship eligibility.",
-  },
-  {
-    slug: "bvoc-interior-design",
-    type: "bvoc",
-    title: "B.Voc in Interior Design",
-    shortTitle: "Interior Design",
-    duration: "3 Years (6 Semesters)",
-    tagline: "Design functional, beautiful spaces using industry-standard CAD, BIM and 3D visualization tools.",
-    overview:
-      "A comprehensive degree covering design theory, materials, space planning and the full digital toolkit (AutoCAD, SketchUp, Revit, V-Ray) used by professional interior design studios, culminating in a real client-style capstone project.",
-    heroImage: "/images/programs/interior-design.svg",
-    softwareTools: [
-      { name: "AutoCAD", iconLabel: "autocad" },
-      { name: "SketchUp", iconLabel: "sketchup" },
-      { name: "Autodesk Revit", iconLabel: "revit" },
-      { name: "V-Ray", iconLabel: "vray" },
-      { name: "3ds Max", iconLabel: "3dsmax" },
-    ],
-    highlights: [
-      "University-recognized 3-year degree",
-      "Hands-on studio and site-visit learning",
-      "BIM-ready curriculum with Autodesk Revit",
-      "Live client project in final semester",
-    ],
-    curriculum: [
-      {
-        module: "Semester 1-2: Design Foundations",
-        topics: ["Elements & Principles of Design", "Drafting Fundamentals (AutoCAD)", "Materials & Finishes", "Color Theory & Ergonomics"],
-      },
-      {
-        module: "Semester 3-4: Technical Design",
-        topics: ["3D Modeling (SketchUp, 3ds Max)", "Building Information Modeling (Revit)", "Lighting Design", "Furniture & Space Planning"],
-      },
-      {
-        module: "Semester 5: Advanced Visualization",
-        topics: ["Photorealistic Rendering (V-Ray)", "Sustainable Design Practices", "Estimation & Costing", "Residential & Commercial Design Studios"],
-      },
-      {
-        module: "Semester 6: Capstone & Industry Project",
-        topics: ["Live Client Project", "Site Execution Basics", "Portfolio Development", "Placement Preparation"],
-      },
-    ],
-    careerRoles: [
-      "Interior Designer",
-      "3D Visualizer",
-      "BIM Modeler",
-      "Space Planner",
-      "Design Consultant",
-      "Furniture & Set Designer",
-    ],
-    faqs: [
-      {
-        question: "Will I learn Autodesk Revit as part of this degree?",
-        answer: "Yes. Revit and BIM workflows are integrated from Semester 3 onward as part of the interior design curriculum.",
-      },
-      {
-        question: "Are site visits included?",
-        answer: "Yes, guided site visits to active project sites are part of the practical curriculum in later semesters.",
-      },
-    ],
-    accreditation: "Awarded in partnership with a UGC-recognized university under the National Skills Qualification Framework (NSQF).",
-    eligibility: "10+2 in any stream from a recognized board.",
-    fees: "Contact admissions for current semester-wise fee structure and scholarship eligibility.",
-    brochurePath: "/brochures/bvoc-interior-design.pdf",
-  },
-  {
-    slug: "bvoc-fine-arts",
-    type: "bvoc",
-    title: "B.Voc in Fine Arts",
-    shortTitle: "Fine Arts",
-    duration: "3 Years (6 Semesters)",
-    tagline: "Master traditional and digital art practices to build a professional creative career.",
-    overview:
-      "This degree blends classical fine arts training (drawing, painting, sculpture) with modern digital art and illustration tools, preparing graduates for careers as professional artists, illustrators and creative directors.",
-    heroImage: "/images/programs/fine-arts.svg",
-    softwareTools: [
-      { name: "Adobe Photoshop", iconLabel: "photoshop" },
-      { name: "Adobe Illustrator", iconLabel: "illustrator" },
-      { name: "Procreate", iconLabel: "procreate" },
-      { name: "Corel Painter", iconLabel: "painter" },
-    ],
-    highlights: [
-      "University-recognized 3-year degree",
-      "Classical + digital art dual training",
-      "Gallery-style final exhibition",
-      "Portfolio built for illustration/design careers",
-    ],
-    curriculum: [
-      {
-        module: "Semester 1-2: Classical Foundations",
-        topics: ["Life Drawing & Anatomy", "Painting Techniques", "Art History & Appreciation", "Composition & Perspective"],
-      },
-      {
-        module: "Semester 3-4: Sculpture & Mixed Media",
-        topics: ["Sculpture & 3D Form", "Printmaking", "Mixed Media Art", "Intro to Digital Illustration"],
-      },
-      {
-        module: "Semester 5: Digital Art Specialization",
-        topics: ["Digital Painting (Photoshop, Procreate)", "Vector Illustration (Illustrator)", "Concept Art Basics", "Portfolio Curation"],
-      },
-      {
-        module: "Semester 6: Capstone & Exhibition",
-        topics: ["Independent Art Project", "Public Exhibition Showcase", "Freelance & Gallery Career Prep"],
-      },
-    ],
-    careerRoles: [
-      "Illustrator",
-      "Concept Artist",
-      "Fine Artist",
-      "Art Director",
-      "Muralist",
-      "Freelance Creative Professional",
-    ],
-    faqs: [
-      {
-        question: "Is this degree only for traditional art, or does it cover digital tools too?",
-        answer: "Both. The first half builds classical fine-art fundamentals; from Semester 5 you specialize in digital painting and illustration software.",
-      },
-    ],
-    accreditation: "Awarded in partnership with a UGC-recognized university under the National Skills Qualification Framework (NSQF).",
-    eligibility: "10+2 in any stream from a recognized board.",
-    fees: "Contact admissions for current semester-wise fee structure and scholarship eligibility.",
-    brochurePath: "/brochures/bvoc-fine-arts.pdf",
-  },
-  {
-    slug: "bvoc-data-science",
-    type: "bvoc",
-    title: "B.Voc in Data Science",
-    shortTitle: "Data Science",
-    duration: "3 Years (6 Semesters)",
-    tagline: "Build a career in analytics, machine learning and AI with a university-backed vocational degree.",
-    overview:
-      "A rigorous, hands-on data science degree covering statistics, Python, SQL, machine learning and business intelligence tools, designed to make graduates job-ready for analyst and junior data science roles.",
-    heroImage: "/images/programs/data-science.svg",
-    softwareTools: [
-      { name: "Python", iconLabel: "python" },
-      { name: "SQL", iconLabel: "sql" },
-      { name: "Power BI", iconLabel: "powerbi" },
-      { name: "Scikit-learn", iconLabel: "sklearn" },
-      { name: "Tableau", iconLabel: "tableau" },
-    ],
-    highlights: [
-      "University-recognized 3-year degree",
-      "Project-based learning with real datasets",
-      "Covers Python, SQL, ML and BI tools",
-      "Capstone project + placement support",
-    ],
-    curriculum: [
-      {
-        module: "Semester 1-2: Foundations",
-        topics: ["Statistics & Probability", "Python Programming", "Data Structures Basics", "Excel & Data Handling"],
-      },
-      {
-        module: "Semester 3-4: Core Data Science",
-        topics: ["SQL & Database Management", "Data Visualization (Power BI, Tableau)", "Exploratory Data Analysis", "Intro to Machine Learning"],
-      },
-      {
-        module: "Semester 5: Applied Machine Learning",
-        topics: ["Supervised & Unsupervised Learning", "Model Evaluation & Tuning", "Intro to Deep Learning", "Business Case Studies"],
-      },
-      {
-        module: "Semester 6: Capstone & Industry Project",
-        topics: ["End-to-End Data Science Project", "Industry Internship", "Interview & Placement Preparation"],
-      },
-    ],
-    careerRoles: [
-      "Data Analyst",
-      "Junior Data Scientist",
-      "Business Intelligence Analyst",
-      "Machine Learning Trainee",
-      "Reporting Analyst",
-    ],
-    faqs: [
-      {
-        question: "Do I need a math or computer science background to join?",
-        answer: "No specific background is required. Foundational statistics and programming are taught from Semester 1.",
-      },
-    ],
-    accreditation: "Awarded in partnership with a UGC-recognized university under the National Skills Qualification Framework (NSQF).",
-    eligibility: "10+2 in any stream from a recognized board (Mathematics background helpful but not mandatory).",
-    fees: "Contact admissions for current semester-wise fee structure and scholarship eligibility.",
-  },
-  {
-    slug: "bvoc-digital-marketing",
-    type: "bvoc",
-    title: "B.Voc in Digital Marketing",
-    shortTitle: "Digital Marketing",
-    duration: "3 Years (6 Semesters)",
-    tagline: "Master SEO, paid ads, content and analytics to launch a career in modern digital marketing.",
-    overview:
-      "This degree covers the full digital marketing stack — SEO, social media, paid advertising, content strategy and analytics — with live campaign projects so graduates enter the workforce with real, measurable experience.",
-    heroImage: "/images/programs/digital-marketing.svg",
-    softwareTools: [
-      { name: "Google Ads", iconLabel: "googleads" },
-      { name: "Google Analytics", iconLabel: "analytics" },
-      { name: "Meta Ads Manager", iconLabel: "meta" },
-      { name: "SEMrush", iconLabel: "semrush" },
-      { name: "HubSpot", iconLabel: "hubspot" },
-    ],
-    highlights: [
-      "University-recognized 3-year degree",
-      "Live campaign management experience",
-      "Covers SEO, paid ads, content & analytics",
-      "Industry certifications integrated into curriculum",
-    ],
-    curriculum: [
-      {
-        module: "Semester 1-2: Marketing Foundations",
-        topics: ["Principles of Marketing", "Consumer Behaviour", "Content Writing Basics", "Introduction to Digital Channels"],
-      },
-      {
-        module: "Semester 3-4: Core Digital Skills",
-        topics: ["Search Engine Optimization (SEO)", "Social Media Marketing", "Paid Advertising (Google & Meta Ads)", "Email & Marketing Automation"],
-      },
-      {
-        module: "Semester 5: Analytics & Strategy",
-        topics: ["Web & Marketing Analytics", "Conversion Rate Optimization", "Brand Strategy", "Marketing Campaign Planning"],
-      },
-      {
-        module: "Semester 6: Capstone & Industry Project",
-        topics: ["Live Client Campaign Management", "Industry Internship", "Portfolio & Placement Preparation"],
-      },
-    ],
-    careerRoles: [
-      "Digital Marketing Executive",
-      "SEO Analyst",
-      "Social Media Manager",
-      "Performance Marketing Associate",
-      "Content Strategist",
-    ],
-    faqs: [
-      {
-        question: "Will I get hands-on experience managing real ad campaigns?",
-        answer: "Yes, from Semester 4 onward you'll manage live/simulated campaigns using real budgets and platforms as part of coursework.",
-      },
-    ],
-    accreditation: "Awarded in partnership with a UGC-recognized university under the National Skills Qualification Framework (NSQF).",
-    eligibility: "10+2 in any stream from a recognized board.",
-    fees: "Contact admissions for current semester-wise fee structure and scholarship eligibility.",
-    brochurePath: "/brochures/bvoc-digital-marketing.pdf",
-  },
-];
-
-export const softwarePackages: Program[] = [
+export const courses: Program[] = [
   {
     slug: "autodesk-revit-cad-package",
-    type: "package",
-    title: "Autodesk Revit & CAD Package",
-    shortTitle: "Revit & CAD Package",
+    type: "course",
+    title: "Autodesk Revit & CAD Course",
+    shortTitle: "Revit & CAD",
     duration: "4 Months",
     tagline: "Become industry-ready on AutoCAD and Revit Architecture/MEP through hands-on drafting and BIM training.",
     overview:
-      "An intensive, certification-focused package covering 2D drafting in AutoCAD through to full Building Information Modeling in Revit Architecture and MEP.",
+      "An intensive, certification-focused course covering 2D drafting in AutoCAD through to full Building Information Modeling in Revit Architecture and MEP.",
     heroImage: "/images/programs/revit-cad.svg",
     softwareTools: [
       { name: "AutoCAD", iconLabel: "autocad" },
@@ -360,7 +54,7 @@ export const softwarePackages: Program[] = [
     ],
     faqs: [
       {
-        question: "Do I get an Autodesk certification after this package?",
+        question: "Do I get an Autodesk certification after this course?",
         answer: "AET issues a certificate of completion. Learners can also explore external Autodesk certification exams separately, subject to their eligibility requirements.",
       },
     ],
@@ -370,13 +64,13 @@ export const softwarePackages: Program[] = [
   },
   {
     slug: "gen-ai-creative-tech-package",
-    type: "package",
-    title: "Gen AI & Creative Tech Package",
+    type: "course",
+    title: "Gen AI & Creative Tech Course",
     shortTitle: "Gen AI & Creative Tech",
     duration: "2 Months",
     tagline: "Learn to create, ideate and automate with Midjourney, Stable Diffusion and AI-powered creative workflows.",
     overview:
-      "A fast-track, future-focused package teaching prompt engineering and generative AI tools for creative professionals — from AI image generation to using ChatGPT for content, design and workflow automation.",
+      "A fast-track, future-focused course teaching prompt engineering and generative AI tools for creative professionals — from AI image generation to using ChatGPT for content, design and workflow automation.",
     heroImage: "/images/programs/gen-ai.svg",
     softwareTools: [
       { name: "Midjourney", iconLabel: "midjourney" },
@@ -417,8 +111,8 @@ export const softwarePackages: Program[] = [
     ],
     faqs: [
       {
-        question: "Do I need a design or tech background for this package?",
-        answer: "No. This package is beginner-friendly and is designed for creatives, marketers and students who want to add Gen AI skills to their toolkit.",
+        question: "Do I need a design or tech background for this course?",
+        answer: "No. This course is beginner-friendly and is designed for creatives, marketers and students who want to add Gen AI skills to their toolkit.",
       },
     ],
     certificationBody: "Certificate of Completion — AET School of Design",
@@ -427,7 +121,7 @@ export const softwarePackages: Program[] = [
   },
   {
     slug: "data-science-ai-package",
-    type: "package",
+    type: "course",
     title: "Data Science",
     shortTitle: "Data Science",
     seoH1: "Data Science Course in Noida",
@@ -542,14 +236,9 @@ export const softwarePackages: Program[] = [
           "This is an offline data science institute format in Noida — instructor-led classroom batches with lab practice. Speak with admissions for the current weekday or working-professional schedule.",
       },
       {
-        question: "How is this different from the B.Voc in Data Science?",
-        answer:
-          "This is a 6-month software skill package focused on tools and projects. The B.Voc is a 3-year university-partnered degree. Counselors can help you choose based on your goals.",
-      },
-      {
         question: "Is EMI available for the data science course in Noida?",
         answer:
-          "Yes. AET offers EMI options on this package. Call 080 4803 3061 or visit the Sector 2 campus for the current fee and batch dates.",
+          "Yes. AET offers EMI options on this course. Call 080 4803 3061 or visit the Sector 2 campus for the current fee and batch dates.",
       },
     ],
     certificationBody: "Certificate of Completion — AET School of Design",
@@ -558,7 +247,7 @@ export const softwarePackages: Program[] = [
   },
   {
     slug: "data-analytics-package",
-    type: "package",
+    type: "course",
     title: "Data Analytics & Business Analytics",
     shortTitle: "Data & Business Analytics",
     seoH1: "Data Analytics Course in Noida",
@@ -658,9 +347,9 @@ export const softwarePackages: Program[] = [
           "Yes. The syllabus includes advanced Excel, SQL reporting queries, Python for analysis, Tableau dashboards and a dedicated Power BI studio — the combination most Noida and Delhi NCR analyst roles list.",
       },
       {
-        question: "Is this the same as the Data Science package?",
+        question: "Is this the same as the Data Science course?",
         answer:
-          "No. This package focuses on business reporting — Excel, SQL, statistics, Tableau and Power BI. The Data Science package goes further into machine learning and deep learning.",
+          "No. This course focuses on business reporting — Excel, SQL, statistics, Tableau and Power BI. The Data Science course goes further into machine learning and deep learning.",
       },
       {
         question: "Can working professionals from Greater Noida join?",
@@ -674,7 +363,7 @@ export const softwarePackages: Program[] = [
   },
   {
     slug: "power-bi-package",
-    type: "package",
+    type: "course",
     title: "Power BI",
     shortTitle: "Power BI",
     seoH1: "Power BI Course in Noida",
@@ -683,7 +372,7 @@ export const softwarePackages: Program[] = [
     tagline:
       "Power BI training institute in Noida — 14-hour classroom course on Power Query, DAX and dashboards.",
     overview:
-      "AET’s Power BI course in Noida is a 14-hour classroom studio at Sector 2. You cover Desktop setup, data connections, Power Query, the data model, DAX, time-series analysis, slicers, maps and a customer analytics dashboard. Distilled from the business analytics BI module so working professionals in Delhi NCR can ship executive reports without a full 5-month analytics package.",
+      "AET’s Power BI course in Noida is a 14-hour classroom studio at Sector 2. You cover Desktop setup, data connections, Power Query, the data model, DAX, time-series analysis, slicers, maps and a customer analytics dashboard. Distilled from the business analytics BI module so working professionals in Delhi NCR can ship executive reports without a full 5-month analytics course.",
     heroImage: "/images/programs/data-science.svg",
     softwareTools: [{ name: "Power BI", iconLabel: "powerbi" }],
     highlights: [
@@ -746,7 +435,7 @@ export const softwarePackages: Program[] = [
       {
         question: "How long is the Power BI training institute schedule?",
         answer:
-          "The package is 14 hours of classroom studio time, typically scheduled for working professionals. Call admissions for the next Sector 2 batch.",
+          "The course is 14 hours of classroom studio time, typically scheduled for working professionals. Call admissions for the next Sector 2 batch.",
       },
     ],
     certificationBody: "Certificate of Completion — AET School of Design",
@@ -755,7 +444,7 @@ export const softwarePackages: Program[] = [
   },
   {
     slug: "sql-package",
-    type: "package",
+    type: "course",
     title: "SQL",
     shortTitle: "SQL",
     seoH1: "SQL Course in Noida",
@@ -764,7 +453,7 @@ export const softwarePackages: Program[] = [
     tagline:
       "SQL training in Noida — one-month classroom course on joins, window functions and reporting queries.",
     overview:
-      "This SQL course in Noida is a one-month classroom package at AET Sector 2, drawn from the data science database module. You learn RDBMS design, single- and multi-table queries, aggregation, window functions and subqueries, then finish with MongoDB documents and aggregation pipelines. Built for analysts and working professionals in Delhi NCR who need production SQL, not a full data science track.",
+      "This SQL course in Noida is a one-month classroom course at AET Sector 2, drawn from the data science database module. You learn RDBMS design, single- and multi-table queries, aggregation, window functions and subqueries, then finish with MongoDB documents and aggregation pipelines. Built for analysts and working professionals in Delhi NCR who need production SQL, not a full data science track.",
     heroImage: "/images/programs/data-science.svg",
     softwareTools: [
       { name: "SQL", iconLabel: "sql" },
@@ -840,7 +529,7 @@ export const softwarePackages: Program[] = [
   },
   {
     slug: "interior-design-3d-spatial-package",
-    type: "package",
+    type: "course",
     title: "Architecture Design",
     shortTitle: "Architecture Design",
     seoH1: "Architecture Design Course in Noida",
@@ -892,7 +581,7 @@ export const softwarePackages: Program[] = [
       {
         question: "Is this an architecture design course in Noida or only software demos?",
         answer:
-          "It is a 4-month classroom package at AET Sector 2 covering AutoCAD, Revit, SketchUp, 3ds Max and V-Ray with a capstone visualization project — not a recorded demo series.",
+          "It is a 4-month classroom course at AET Sector 2 covering AutoCAD, Revit, SketchUp, 3ds Max and V-Ray with a capstone visualization project — not a recorded demo series.",
       },
       {
         question: "Do you teach AutoCAD and Revit in the same course?",
@@ -900,7 +589,7 @@ export const softwarePackages: Program[] = [
           "Yes. Module 1 is 2D drafting in AutoCAD; Module 4 is BIM with Revit. SketchUp, 3ds Max and V-Ray sit in between so you can take a project from plan to render.",
       },
       {
-        question: "Is this the right package if I already have a design degree?",
+        question: "Is this the right course if I already have a design degree?",
         answer:
           "Yes. Design graduates in Noida and Delhi NCR often join for the CAD, BIM and visualization stack used in local studios.",
       },
@@ -916,7 +605,7 @@ export const softwarePackages: Program[] = [
   },
 ];
 
-export const allPrograms: Program[] = [...bvocPrograms, ...softwarePackages];
+export const allPrograms: Program[] = courses;
 
 export function getProgramBySlug(slug: string): Program | undefined {
   return allPrograms.find((program) => program.slug === slug);
@@ -926,26 +615,26 @@ export const generalFaqs: ProgramFAQGeneral[] = [
   {
     question: "Is financial assistance or EMI available for course fees?",
     answer:
-      "Yes, AET offers flexible EMI plans and need-based scholarships for eligible students on both B.Voc degrees and software packages. Speak with our counseling team for details specific to your chosen program.",
+      "Yes, AET offers flexible EMI plans and need-based scholarships for eligible students on our courses. Speak with our counseling team for details specific to your chosen course.",
   },
   {
-    question: "Are the B.Voc degrees recognized for further studies and government jobs?",
+    question: "What certification do I receive after completing a course?",
     answer:
-      "Yes, our B.Voc degrees are awarded through university partnerships under the National Skills Qualification Framework (NSQF), making them valid for further academic progression and recognized employment.",
+      "Graduates receive a Certificate of Completion from AET School of Design. Some courses also prepare you for external vendor exams, subject to those providers’ eligibility rules.",
   },
   {
     question: "How does AET keep its software training industry-relevant?",
     answer:
-      "Our programs combine practical projects, current software workflows and portfolio development to help students build career-ready skills.",
+      "Our courses combine practical projects, current software workflows and portfolio development to help students build career-ready skills.",
   },
   {
     question: "Does AET provide placement assistance after course completion?",
     answer:
-      "Yes, all B.Voc programs and most software packages include resume building, mock interviews, and placement support through our industry hiring partner network.",
+      "Yes. Courses include resume building, mock interviews, and placement support through our industry hiring partner network.",
   },
   {
-    question: "Can I switch between a B.Voc degree and a short-term software package?",
+    question: "Can I take more than one course?",
     answer:
-      "Absolutely. Many students start with a short-term software package to explore a field before committing to a full 3-year B.Voc degree. Our counselors can help you plan the right path.",
+      "Yes. Many students start with a focused course such as SQL or Power BI and later join a longer Data Science or Architecture Design course. Our counselors can help you plan the right path.",
   },
 ];

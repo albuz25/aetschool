@@ -6,7 +6,7 @@ import { Container } from "@/components/shared/Container";
 
 const STATS = [
   { icon: Users, value: "500+", label: "Students Trained" },
-  { icon: Building2, value: "5", label: "University Partnerships" },
+  { icon: Building2, value: "7+", label: "Job-Ready Courses" },
   { icon: Award, value: "Hands-on", label: "Learning Approach" },
   { icon: Cpu, value: "9+", label: "Industry Software Covered" },
 ];

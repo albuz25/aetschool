@@ -5,26 +5,22 @@ import { ProgramsExplorer } from "@/components/programs/ProgramsExplorer";
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "All Programs",
+  title: "All Courses",
   description:
-    "Explore university-partnered B.Voc degrees and industry-aligned software skill packages offered by AET School of Design.",
+    "Explore industry-aligned courses at AET School of Design — Data Science, Analytics, Power BI, SQL, Architecture Design, Revit & CAD, and Gen AI.",
   path: "/programs",
   keywords: [
-    "AET programs",
-    "B.Voc courses Noida",
-    "Animation VFX course",
+    "AET courses",
     "Interior Design course",
-    "Digital Marketing course",
     "Data Science course",
     "Gen AI course",
-    "software skill packages",
+    "Power BI course Noida",
+    "SQL course Noida",
   ],
 });
 
 export default async function ProgramsPage(props: PageProps<"/programs">) {
   const searchParams = await props.searchParams;
-  const typeParam = Array.isArray(searchParams?.type) ? searchParams?.type[0] : searchParams?.type;
-  const initialType = typeParam === "bvoc" || typeParam === "package" ? typeParam : "all";
 
   const searchQueryParam = Array.isArray(searchParams?.search)
     ? searchParams?.search[0]
@@ -35,12 +31,12 @@ export default async function ProgramsPage(props: PageProps<"/programs">) {
     <div className="bg-offwhite py-14 sm:py-20">
       <Container>
         <SectionHeading
-          eyebrow="All Programs"
-          title="Find the Right Program for Your Goals"
-          description="Browse our full catalog of university-partnered B.Voc degrees and short-term software skill packages."
+          eyebrow="All Courses"
+          title="Find the Right Course for Your Goals"
+          description="Browse our catalog of job-focused classroom courses in data, design and creative tech."
         />
         <div className="mt-10">
-          <ProgramsExplorer initialType={initialType} initialSearch={initialSearch} />
+          <ProgramsExplorer initialSearch={initialSearch} />
         </div>
       </Container>
     </div>

@@ -14,8 +14,8 @@ const PILLARS = [
   },
   {
     icon: GraduationCap,
-    title: "University-Recognized Degree",
-    description: "Our B.Voc programs are awarded in partnership with an accredited university.",
+    title: "Industry-Aligned Certificates",
+    description: "Every course ends with a Certificate of Completion and a portfolio-ready project.",
   },
   {
     icon: Briefcase,

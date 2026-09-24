@@ -7,11 +7,6 @@ import { ProgramIcon, type ProgramIconName } from "@/components/icons/ProgramIco
 import { allPrograms } from "@/data/courses";
 
 const PROGRAM_ICONS: Record<string, ProgramIconName> = {
-  "bvoc-animation-vfx": "clapperboard",
-  "bvoc-interior-design": "armchair",
-  "bvoc-fine-arts": "palette",
-  "bvoc-data-science": "bar-chart",
-  "bvoc-digital-marketing": "megaphone",
   "autodesk-revit-cad-package": "ruler",
   "gen-ai-creative-tech-package": "sparkle",
   "data-science-ai-package": "database",
@@ -41,9 +36,9 @@ export function QuickProgramsGrid() {
     <section className="bg-white py-14">
       <Container>
         <SectionHeading
-          eyebrow="All Programs"
-          title="Explore Top Programs"
-          description="A quick look at every degree and software package we offer — click through for full curriculum, fees and career details."
+          eyebrow="All Courses"
+          title="Explore Top Courses"
+          description="A quick look at every course we offer — click through for full curriculum, fees and career details."
         />
         <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
           {allPrograms.map((program, index) => {
@@ -61,7 +56,7 @@ export function QuickProgramsGrid() {
                 </span>
                 <span className="text-xs font-semibold text-navy sm:text-sm">{program.shortTitle}</span>
                 <span className="text-[10px] font-medium text-muted-foreground uppercase">
-                  {program.type === "bvoc" ? "B.Voc Degree" : "Software Package"}
+                  Course
                 </span>
                 <span className="flex items-center gap-1 text-[10px] font-semibold text-orange opacity-0 transition-opacity group-hover:opacity-100">
                   Learn More

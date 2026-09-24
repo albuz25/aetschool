@@ -24,15 +24,7 @@ export function ProgramCard({ program, index = 0 }: { program: Program; index?: 
     >
       <div className="flex items-center justify-between gap-2">
         <div className="flex flex-wrap items-center gap-1.5">
-          <Badge
-            className={
-              program.type === "bvoc"
-                ? "border-none bg-blue/10 text-blue"
-                : "border-none bg-orange/10 text-orange"
-            }
-          >
-            {program.type === "bvoc" ? "B.Voc Degree" : "Software Package"}
-          </Badge>
+          <Badge className="border-none bg-orange/10 text-orange">Course</Badge>
           <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[10px] font-semibold text-emerald-600">
             <Wallet className="size-3" />
             EMI Available

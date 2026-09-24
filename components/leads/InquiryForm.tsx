@@ -149,7 +149,6 @@ export function InquiryForm({
               <SelectValue placeholder="Select a program" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="diploma-fine-arts">Diploma in Fine Arts</SelectItem>
               {allPrograms.map((program) => (
                 <SelectItem key={program.slug} value={program.slug}>
                   {program.shortTitle}

@@ -11,9 +11,9 @@ import { getProgramBySlug } from "@/data/courses";
 import { getUpcomingBatchDates } from "@/lib/batchDates";
 
 const CURATED_SLUGS = [
-  "bvoc-animation-vfx",
-  "bvoc-interior-design",
-  "bvoc-digital-marketing",
+  "data-science-ai-package",
+  "data-analytics-package",
+  "interior-design-3d-spatial-package",
   "gen-ai-creative-tech-package",
 ];
 

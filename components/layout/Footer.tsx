@@ -9,24 +9,19 @@ import { CONTACT } from "@/lib/constants";
 export function Footer() {
   return (
     <footer className="bg-navy text-white/80">
-      <Container className="grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-5">
+      <Container className="grid grid-cols-1 gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
         <div className="sm:col-span-2 lg:col-span-1">
           <Link href="/" className="flex items-center">
             <Logo />
           </Link>
           <p className="mt-4 text-sm leading-relaxed text-white/60">
-            University-partnered B.Voc degrees and industry-aligned software skill packages for creative and
-            technology careers.
+            Industry-aligned courses for data, design and creative technology careers.
           </p>
         </div>
 
         <FooterColumn
-          heading="University Degrees"
-          links={footerLinks.programs.map((p) => ({ title: p.title, href: `/programs/${p.slug}` }))}
-        />
-        <FooterColumn
-          heading="Software Packages"
-          links={footerLinks.packages.map((p) => ({ title: p.title, href: `/programs/${p.slug}` }))}
+          heading="Courses"
+          links={footerLinks.courses.map((p) => ({ title: p.title, href: `/programs/${p.slug}` }))}
         />
         <FooterColumn
           heading="Company"
@@ -68,9 +63,8 @@ export function Footer() {
           </div>
         </Container>
         <Container className="pb-6 text-[11px] leading-relaxed text-white/40">
-          Disclaimer: Program names, durations, fees and university partnerships referenced on this site are
-          illustrative placeholders for demonstration purposes. Software product names are trademarks of their
-          respective owners.
+          Disclaimer: Course names, durations and fees referenced on this site are illustrative placeholders
+          for demonstration purposes. Software product names are trademarks of their respective owners.
         </Container>
       </div>
     </footer>
